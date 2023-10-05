@@ -15,3 +15,7 @@ assembly code)
 
 3-name: The script uses the -o option with the gcc compiler to divert the
 executable output from the default a.out to a file called cisfun
+
+4-puts.c: The source code uses the puts function to print the specified string.
+It always returns a value of 0. It uses the betty style (indentation,
+brace position, usage of void, documentation and so on)
