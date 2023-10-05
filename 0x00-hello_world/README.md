@@ -12,3 +12,6 @@ in a file of the same name as the source code file, but a .o extension
 2-assembler: The script uses the -S flag with the gcc compiler to stop the
 compilation process after the compiler finishes its work (generating
 assembly code)
+
+3-name: The script uses the -o option with the gcc compiler to divert the
+executable output from the default a.out to a file called cisfun
