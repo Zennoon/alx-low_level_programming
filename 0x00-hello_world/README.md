@@ -25,3 +25,7 @@ literal. Like the puts one, it always returns 0, and alse uses betty style
 
 6-size.c: The source code uses the sizeof operator to print the sizes of the
 various intrinsic data types in the machine that the code is compiled on.
+
+100-intel: The script uses the -S flag of the gcc compiler to generate assembly
+code. The -masm option is used to change the assembly code syntax from the
+default AT&T syntax to intel syntax
