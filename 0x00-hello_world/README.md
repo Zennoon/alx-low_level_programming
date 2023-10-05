@@ -29,3 +29,6 @@ various intrinsic data types in the machine that the code is compiled on.
 100-intel: The script uses the -S flag of the gcc compiler to generate assembly
 code. The -masm option is used to change the assembly code syntax from the
 default AT&T syntax to intel syntax
+
+101-quote.c: The source code uses the perror function from the stdio library to
+print the string literal to the standard output
