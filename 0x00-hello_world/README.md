@@ -9,3 +9,6 @@ move the output to a file called c
 compilation process before the linking stage. By default, the output is placed
 in a file of the same name as the source code file, but a .o extension
 
+2-assembler: The script uses the -S flag with the gcc compiler to stop the
+compilation process after the compiler finishes its work (generating
+assembly code)
