@@ -19,3 +19,6 @@ executable output from the default a.out to a file called cisfun
 4-puts.c: The source code uses the puts function to print the specified string.
 It always returns a value of 0. It uses the betty style (indentation,
 brace position, usage of void, documentation and so on)
+
+5-printf.c: The source code uses the printf to print the specified string
+literal. Like the puts one, it always returns 0, and alse uses betty style
