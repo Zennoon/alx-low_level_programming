@@ -22,3 +22,6 @@ brace position, usage of void, documentation and so on)
 
 5-printf.c: The source code uses the printf to print the specified string
 literal. Like the puts one, it always returns 0, and alse uses betty style
+
+6-size.c: The source code uses the sizeof operator to print the sizes of the
+various intrinsic data types in the machine that the code is compiled on.
