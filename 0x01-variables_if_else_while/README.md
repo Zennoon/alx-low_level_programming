@@ -29,3 +29,7 @@ it is neither.
 (saving memory) at 0 and then uses a while loop to print the number and
 increment it until it reaches 10, in which case it exits the loop and prints
 a new line.
+
+6-print_numberz.c: The code uses the ASCII decimal integers of characters
+'0'-'9', which are 48-57 respectively, and passes these integers to putchar
+which translates them to their ASCII characters.
