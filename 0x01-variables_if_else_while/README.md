@@ -13,3 +13,9 @@ on the value of that last digit using an if...else if...else statement
 uses a while loop to print a character and then increment its value to the next
 character until 'z' is printed. Then, an additional putchar is used to print
 a new line.
+
+3-print_alphabets.c: The code first initializes the char variable to 'a'
+Then it uses a while loop to print the entire lowercase alphabet.
+After, it assigns the variable to 'A', and uses another while loop
+to print the uppercase alphabet. Last, an additional putchar is used
+to print a new line
