@@ -19,3 +19,8 @@ Then it uses a while loop to print the entire lowercase alphabet.
 After, it assigns the variable to 'A', and uses another while loop
 to print the uppercase alphabet. Last, an additional putchar is used
 to print a new line
+
+4-print_alphabt.c: The code uses a while loop to print the alphabet, as
+before. This time, it uses an if statement inside the loop to check
+if the current character is not an 'e' or a 'q', and to print only if
+it is neither.
