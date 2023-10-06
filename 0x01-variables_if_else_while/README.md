@@ -43,3 +43,10 @@ and the second one to print from 'a' to 'f', imitating the digits of base 16
 9-print_comb.c: The code uses the ASCII code of characters '0' to '9', to print
 them. Next to each number, a ',' and a ' ' is printed, with the exception of 9.
 For 9, it only prints the '9' itself
+
+100-print_comb3.c: The code first initializes a variable to the ASCII code of
+'0', then until it reaches the ASCII code for '9', it sets another variable
+to the next character (num1 + 1), and until this variable reaches '9'
+(inclusive), it prints   the combination of the two characters, along with
+',' and ' '. The exception is the last combination '89', in which case, only
+the combination is printed.
