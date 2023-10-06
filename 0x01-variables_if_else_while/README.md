@@ -24,3 +24,8 @@ to print a new line
 before. This time, it uses an if statement inside the loop to check
 if the current character is not an 'e' or a 'q', and to print only if
 it is neither.
+
+5-print_numbers.c: The code initializes an unsigned short
+(saving memory) at 0 and then uses a while loop to print the number and
+increment it until it reaches 10, in which case it exits the loop and prints
+a new line.
