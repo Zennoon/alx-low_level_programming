@@ -39,3 +39,7 @@ decrements it until it prints 'a'
 
 8-print_base16.c: The code uses two loops, the first to print from '0' to '9',
 and the second one to print from 'a' to 'f', imitating the digits of base 16
+
+9-print_comb.c: The code uses the ASCII code of characters '0' to '9', to print
+them. Next to each number, a ',' and a ' ' is printed, with the exception of 9.
+For 9, it only prints the '9' itself
