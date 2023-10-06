@@ -33,3 +33,6 @@ a new line.
 6-print_numberz.c: The code uses the ASCII decimal integers of characters
 '0'-'9', which are 48-57 respectively, and passes these integers to putchar
 which translates them to their ASCII characters.
+
+7-print_tebahpla.c: The code initializes a variable at 'z', and prints and
+decrements it until it prints 'a'
