@@ -36,3 +36,6 @@ which translates them to their ASCII characters.
 
 7-print_tebahpla.c: The code initializes a variable at 'z', and prints and
 decrements it until it prints 'a'
+
+8-print_base16.c: The code uses two loops, the first to print from '0' to '9',
+and the second one to print from 'a' to 'f', imitating the digits of base 16
