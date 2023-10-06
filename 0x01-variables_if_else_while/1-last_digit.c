@@ -2,6 +2,18 @@
 #include <time.h>
 #include <stdio.h>
 
+/**
+ * main - The entry point of the program
+ *
+ * Description: The function generates a random number, then gets its last
+ * digit (which is the remainder when divided by 10). Then, it uses an
+ * if...else if...else statement to print a message accordingly. There is a
+ * catch though, if the number is negative, the modulo operator will return
+ * a negative number, which can't really be a digit. I could have corrected it
+ * using the unary + operator, but the examples shown in the project show
+ * negative numbers, so I have chosen to leave it as such
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n;
