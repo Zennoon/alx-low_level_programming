@@ -50,3 +50,14 @@ to the next character (num1 + 1), and until this variable reaches '9'
 (inclusive), it prints   the combination of the two characters, along with
 ',' and ' '. The exception is the last combination '89', in which case, only
 the combination is printed.
+
+101-print_comb4.c: The code adds another layer to the above (100-print_comb3.c)
+implementation
+
+102-print_comb5.c: The code makes use of a pattern I noticed in the
+given example. In each combination, the first number (set of numbers) is
+less than the second set. So using while loops, the code prints each
+combination, starting from first number '00' (second number has to be greater
+so it starts at '01') to first number '98' (second number is 99). The first
+number can't be '99' because the second number won't have any options, so
+it stops at '98 99'
