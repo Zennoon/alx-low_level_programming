@@ -22,7 +22,8 @@ int print_sign(int n)
 		sign = -1;
 		_putchar('-');
 	}
-	else {
+	else
+	{
 		sign = 0;
 		_putchar('0');
 	}
