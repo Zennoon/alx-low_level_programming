@@ -36,5 +36,5 @@ void print_fibonacci(void)
 		num2 = sum;
 		cnt++;
 	}
-	printf("%ld\n", sum);
+	printf("%ld\n", num1 + num2);
 }
