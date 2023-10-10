@@ -4,8 +4,8 @@ void print_98_fibonacci(void);
 
 /**
  * main - The entry point of the program
- *
- * Description: Uses the print_98_fibonacci function to print the fibonacci series
+ * Description: Uses the print_98_fibonacci function to print the
+ * fibonacci series
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -16,10 +16,8 @@ int main(void)
 
 
 /**
- * print_fibonacci - Prints the first 98 elements of the fibonacci series
+ * print_98_fibonacci - Prints the first 98 elements of the fibonacci series
  *
- * Description: The function uses a loop, and makes the variables unsigned
- * because the space is needed for large numbers
  * Return: void
  */
 void print_98_fibonacci(void)
