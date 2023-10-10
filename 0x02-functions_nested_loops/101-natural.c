@@ -28,7 +28,7 @@ void sum_of_multiples(void)
 
 	while (n < 1024)
 	{
-		if (!(n % 3 == 0) || !(n % 5 == 0))
+		if (n % 3 == 0 || n % 5 == 0)
 		{
 			sum += n;
 		}
