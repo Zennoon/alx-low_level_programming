@@ -34,7 +34,7 @@ int _isupper(char c)
 
 /**
  * _isalpha - Checks whether a given character is alphabetic or not
- * @c
+ * @c: The character to be checked
  *
  * Description: The function uses the functions _islower and _isupper because
  * an alphabet character is either uppercase or lowercase
