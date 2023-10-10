@@ -25,7 +25,7 @@ void times_table(void)
 			short product;
 
 			product = num1 * num2;
-			print_table_line(num1, num2, product);
+			print_table_line(num2, product);
 			num2++;
 		}
 		num1++;
@@ -34,13 +34,12 @@ void times_table(void)
 
 /**
  * print_table_line - Prints a single line of the times table
- * @num1: Corresponds to num1 in times_table
  * @num2: Corresponds to num2 in times_table
  * @product: num1 * num2
  *
  * Return: void
  */
-void print_table_line(short num1, short num2, short product)
+void print_table_line(short num2, short product)
 {
 	if (num2 == 0)
 	{
