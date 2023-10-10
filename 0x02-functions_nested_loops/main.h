@@ -2,7 +2,7 @@
 #define HEADER_EXISTS
 
 #include <stdio.h>
-
+void _putchar(char c);
 /**
  * print_alphabet - Prints the entire alphabet in lowercase
  *
