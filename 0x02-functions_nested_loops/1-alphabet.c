@@ -1,14 +1,20 @@
 #include "main.h"
 
 /**
- * main - The entry point of the program
+ * print_alphabet - Prints the alphabet in lowercase once
  *
- * Description: The function uses the print_alphabet function from the 1-main.c
- * file which in turn uses the _putchar function.
+ * Description: The function uses the _putchar function which is defined in
+ * _putchar.c and has a prototype declaration in main.h
  * Return: Always 0 (Success)
  */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	char c = 'a';
+
+	while (c <= 'z')
+	{
+		_putchar(c);
+		c++;
+	}
+	_putchar('\n');
 }
