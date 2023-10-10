@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * main - The entry point of the program
@@ -8,6 +7,6 @@
  */
 int main(void)
 {
-	fwrite("_putchar\n", 1, 9);
+	print_alphabet();
 	return (0);
 }
