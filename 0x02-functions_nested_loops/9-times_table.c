@@ -1,6 +1,6 @@
 #include "main.h"
 
-void print_table_line(short, short, short);
+void print_table_line(short, short);
 
 /**
  * times_table - Prints the 9 times table
