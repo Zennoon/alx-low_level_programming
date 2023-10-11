@@ -22,18 +22,18 @@ int main(void)
  */
 void print_98_fibonacci(void)
 {
-	unsigned long num1 = 0;
-	unsigned long num2 = 1;
-	unsigned long sum = 0;
+	long double num1 = 0;
+	long double num2 = 1;
+	long double sum = 0;
 	short cnt = 0;
 
 	while (cnt < 97)
 	{
 		sum = num1 + num2;
-		printf("%lu, ", sum);
+		printf("%.0Lf, ", sum);
 		num1 = num2;
 		num2 = sum;
 		cnt++;
 	}
-	printf("%lu\n", num1 + num2);
+	printf("%.0Lf\n", num1 + num2);
 }
