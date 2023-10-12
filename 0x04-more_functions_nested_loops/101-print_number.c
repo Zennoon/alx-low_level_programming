@@ -13,6 +13,11 @@ void print_number(int n)
 {
 	int digits;
 
+	if (n < 0)
+	{
+		_putchar('-');
+		n *= -1;
+	}
 	digits = count_digit(n);
 	while (digits > 0)
 	{
