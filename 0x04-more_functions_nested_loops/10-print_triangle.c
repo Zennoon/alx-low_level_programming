@@ -44,3 +44,47 @@ void print_triangle(int size)
 		}
 	}
 }
+
+
+/**
+ * print_triangle2 - Does the some task as print_triangle but with another
+ * logic
+ * @size: The size of the triangle
+ *
+ * Description: I think this approach, although it might be faster, is somewhat
+ * cryptic and more difficult to understand
+ * Return: void
+ */
+void print_triangle2(int size)
+{
+	if (size <= 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		int i;
+
+		i = 0;
+		while (i < size)
+		{
+			int j;
+
+			j = 0;
+			while (j < size)
+			{
+				if (j + i + 1 < size)
+				{
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar('#');
+				}
+				j++;
+			}
+			_putchar('\n');
+			i++;
+		}
+	}
+}
