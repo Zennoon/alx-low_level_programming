@@ -13,4 +13,6 @@ void print_square(int);
 void print_triangle(int);
 void print_triangle2(int);
 void print_number(int);
+int count_digits(int);
+int power(int);
 #endif
