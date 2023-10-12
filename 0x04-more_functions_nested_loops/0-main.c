@@ -12,6 +12,7 @@ int main(void)
 	int A = _isupper('A');
 	int d = _isupper('d');
 	int D = _isupper('D');
+	
 	_putchar(a + '0');
 	_putchar(A + '0');
 	_putchar(d + '0');

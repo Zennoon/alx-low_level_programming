@@ -12,6 +12,7 @@ int main(void)
 	int z = _isdigit('9');
 	int n = _isdigit('n');
 	int e = _isdigit('4');
+	
 	_putchar(a + '0');
 	_putchar(z + '0');
 	_putchar(n + '0');
