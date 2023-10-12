@@ -1,13 +1,21 @@
 #include "main.h"
 
 /**
- * main - The entry point of the program
+ * main - check the code
  *
- * Description: Uses the print_number function to print a given number to stdout
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 int main(void)
 {
-	print_number(-1);
-	return (0);
+    print_number(98);
+    _putchar('\n');
+    print_number(402);
+    _putchar('\n');
+    print_number(1024);
+    _putchar('\n');
+    print_number(0);
+    _putchar('\n');
+    print_number(-98);
+    _putchar('\n');
+    return (0);
 }
