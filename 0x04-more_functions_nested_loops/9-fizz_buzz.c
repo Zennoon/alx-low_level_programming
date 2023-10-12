@@ -17,19 +17,23 @@ int main(void)
 	{
 		if (!(i % 15))
 		{
-			printf("FizzBuzz\n");
+			printf("FizzBuzz ");
 		}
 		else if (!(i % 3))
 		{
-			printf("Fizz\n");
+			printf("Fizz ");
 		}
 		else if (!(i % 5))
 		{
-			printf("Buzz\n");
+			printf("Buzz ");
 		}
 		else
 		{
-			printf("%d\n", i);
+			printf("%d ", i);
+		}
+		if (i == 100)
+		{
+			printf("\n");
 		}
 		i++;
 	}
