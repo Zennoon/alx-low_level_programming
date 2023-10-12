@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 int count_digits(int);
 int power(int, int);
