@@ -22,15 +22,15 @@ int main(void)
  */
 void find_largest_pfactor(void)
 {
-	long unsigned num = 612852475143;
-	long unsigned tmp = num;
+	unsigned long num = 612852475143;
+	unsigned long tmp = num;
 
 	while (tmp >= 2)
 	{
 		if (!(num % tmp))
 		{
 			short is_prime = 1;
-			long unsigned tmp2 = 2;
+			unsigned long tmp2 = 2;
 
 			while (tmp2 < tmp)
 			{
