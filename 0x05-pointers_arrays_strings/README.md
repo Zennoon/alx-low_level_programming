@@ -7,3 +7,6 @@ operator (&). Then, using the dereference operator (*), we can access and
 modify the value stored in the address which a pointer points to. This can be
 used to pass arguments to functions by reference, so that the function can
 modify these arguments.
+
+1-swap_int.c: This source file uses the same concept as above, using pointers
+to alter the value (in this case swap the value) of two variables.
