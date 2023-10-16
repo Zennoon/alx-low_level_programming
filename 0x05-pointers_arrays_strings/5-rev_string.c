@@ -13,24 +13,18 @@ int get_length(char *);
 void rev_string(char *s)
 {
 	int len;
-
-	len = get_length(s);
-	char copy_str[len];
 	int i;
 
+	len = get_length(s);
 	i = 0;
-	while (i < len)
+	while (i < len / 2)
 	{
-		copy_str[i] = *(s + i);
-		i++;
-	}
-	int j;
+		char temp;
 
-	j = 0;
-	while (j < len)
-	{
-		s[j] = copy_str[len - 1 - j];
-		j++;
+		temp = *(s + i);
+		s[i] = s[len - 1 - i];
+		s[len - 1 - i] = temp;
+		i++;
 	}
 }
 
