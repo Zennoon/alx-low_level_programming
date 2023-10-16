@@ -10,3 +10,9 @@ modify these arguments.
 
 1-swap_int.c: This source file uses the same concept as above, using pointers
 to alter the value (in this case swap the value) of two variables.
+
+2-str_len.c: This source file uses the concepts of pointers, and strings.
+String names, just like array names are constant pointers to the first
+character/element. So, using pointer arithmetic, we can increment a pointer to
+the first character of a string until it reaches the null terminator to find
+its length
