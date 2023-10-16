@@ -16,3 +16,11 @@ String names, just like array names are constant pointers to the first
 character/element. So, using pointer arithmetic, we can increment a pointer to
 the first character of a string until it reaches the null terminator to find
 its length
+
+3-puts.c: This source file still uses pointers, and strings, but in a modified
+manner. Strings are just one dimensional arrays of characters and as mentioned
+string names are just constant pointers to the first character of the string.
+So, instead of declaring another pointer (because this one is constant), we
+just use the concept of *(arr_name + n) = arr_name[n] and access each character
+of the string to print it using _putchar until *(str_name + n) becomes the null
+terminator ('\0').
