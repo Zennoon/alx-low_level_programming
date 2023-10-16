@@ -37,3 +37,7 @@ char arrays, so when I tried mutating the string (which is a constant pointer),
 it resulted in a segfault, because I was trying an illegal modification. The
 problem was resolved when I made the strings declared as arrays, because arrays
 are mutable.
+
+6-puts2.c: This source file is pretty straight forward. It just uses the same
+concepts as 3-puts.c, only this time, we use the loop counter to only print
+the character if it is even.
