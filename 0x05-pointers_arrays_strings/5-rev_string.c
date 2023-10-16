@@ -42,15 +42,15 @@ void rev_string(char *s)
  */
 int get_length(char *s)
 {
-        short len;
-        short i;
+	short len;
+	short i;
 
-        len = 0;
-        i = 0;
-        while (*(s + i))
-        {
-                len++;
-                i++;
-        }
-        return (len);
+	len = 0;
+	i = 0;
+	while (*(s + i))
+	{
+		len++;
+		i++;
+	}
+	return (len);
 }
