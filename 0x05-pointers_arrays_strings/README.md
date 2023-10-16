@@ -29,3 +29,11 @@ terminator ('\0').
 First, we got the length of the string, then, assigned a pointer to the last
 character of the string using the length. Finally, we decrement that pointer
 until we have printed all the characters of the string.
+
+5-rev_string: This source file first makes a copy of the string to be reversed,
+then it changes the original string using array assignment statements inside a
+loop. One thing I struggled with during this task, was that I was initializing
+my test strings as char pointers rather than char arrays, so when I tried
+mutating the string (which is a constant pointer), it resulted in a segfault,
+because I was trying an illegal modification. The problem was resolved when I
+made the strings declared as arrays, because arrays are mutable.
