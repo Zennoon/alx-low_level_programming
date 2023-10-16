@@ -24,3 +24,8 @@ So, instead of declaring another pointer (because this one is constant), we
 just use the concept of *(arr_name + n) = arr_name[n] and access each character
 of the string to print it using _putchar until *(str_name + n) becomes the null
 terminator ('\0').
+
+4-print_rev.c: This source file combines what we did in the previous 2 tasks.
+First, we got the length of the string, then, assigned a pointer to the last
+character of the string using the length. Finally, we decrement that pointer
+until we have printed all the characters of the string.
