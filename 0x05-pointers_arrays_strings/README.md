@@ -41,3 +41,12 @@ are mutable.
 6-puts2.c: This source file is pretty straight forward. It just uses the same
 concepts as 3-puts.c, only this time, we use the loop counter to only print
 the character if it is even.
+
+7-puts_half.c: This source file uses a cheeky way out of checking if the length
+of the string is even or not, using integer division. It just starts printing
+from s[len - (len / 2)]. If len is even, then it starts from half, if len is
+odd, then, it starts printing at s[(len / 2) + 1], just as intended.
+
+8-print_array: This source file uses the concept of arrays more directly. It
+accesses the elements of the array by indexing, using a loop to print the
+desired number of elements of the array.
