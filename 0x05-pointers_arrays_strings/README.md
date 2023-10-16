@@ -50,3 +50,8 @@ odd, then, it starts printing at s[(len / 2) + 1], just as intended.
 8-print_array: This source file uses the concept of arrays more directly. It
 accesses the elements of the array by indexing, using a loop to print the
 desired number of elements of the array.
+
+9-strcpy.c: This source file revisits the concept of strings being immutable,
+and how trying to change a string pointer will cause a segfault. This source
+code treats the strings as arrays, and copies each value until '\0' is reached
+then, it will add '\0' because the string needs to be null terminated
