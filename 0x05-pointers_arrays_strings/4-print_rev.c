@@ -19,8 +19,10 @@ void print_rev(char *s)
 
 	len = get_length(s);
 	i = len - 1;
-	ptr = s + i; /* ptr now holds the address at the last character
-			of the string */
+	ptr = s + i; /**
+		      * ptr now holds the address at the last character
+		      *	of the string
+		      */
 	while (i >= 0)
 	{
 		_putchar(*ptr);
@@ -30,6 +32,12 @@ void print_rev(char *s)
 	_putchar('\n');
 }
 
+/**
+ * get_length - Returns the length of a given null terminated string
+ * @s: The string the length of which is computed
+ *
+ * Return: The length of s
+ */
 int get_length(char *s)
 {
 	short len;
