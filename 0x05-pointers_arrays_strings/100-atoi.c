@@ -10,7 +10,7 @@
  */
 int _atoi(char *s)
 {
-	int num;
+	unsigned int num;
 	int i;
 	int sign;
 	int number_found;
@@ -25,12 +25,12 @@ int _atoi(char *s)
 		{
 			sign *= -1;
 		}
-		else if (48 <= s[i] && s[i] <= 57)
+		else if (s[i] >= 48 && s[i] <= 57)
 		{
 			num = (num * 10) + (s[i] % 48);
 			number_found = 1; /* Number has been found */
 		}
-		else if (!(48 <= s[i] && s[i] <= 57) && number_found)
+		else if (!(s[i] >= 48 && s[i] <= 57) && number_found)
 		{
 			break;
 		}

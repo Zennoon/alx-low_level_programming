@@ -55,3 +55,13 @@ desired number of elements of the array.
 and how trying to change a string pointer will cause a segfault. This source
 code treats the strings as arrays, and copies each value until '\0' is reached
 then, it will add '\0' because the string needs to be null terminated
+
+100-atoi.c: This source file uses the given string as an array, and loops each
+character to check if it is a digit or a special sign (-). One thing that might
+be of interest is why I made num unsigned. One test case that I used in the
+100-main.c file is the string "-2147483648". The limit of an integer value is
+-2147483648 to 2147483647. If I make the num variable signed, when it holds the
+value 2147483648 before it is returned multiplied by sign (-1), it will create
+a signed integer overflow because it is over the limit. However, if I make it
+unsigned, it can hold the value, then when I return it, it is multiplied by
+-1 which makes it -2147483648, which is within the limit of a signed int.

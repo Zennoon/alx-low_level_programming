@@ -14,11 +14,12 @@ int main(void)
 		       "abcd98",
 		       "ef402gh",
 		       "+-+-+-23a",
-		       "   -   +   - ++ - -98"
+		       "   -   +   - ++ - -98",
+		       "-2147483648"
 	};
 	int i = 0;
 
-	while (i < 6)
+	while (i < 7)
 	{
 		printf("%s: %d\n", str[i], _atoi(str[i]));
 		i++;
