@@ -65,3 +65,11 @@ value 2147483648 before it is returned multiplied by sign (-1), it will create
 a signed integer overflow because it is over the limit. However, if I make it
 unsigned, it can hold the value, then when I return it, it is multiplied by
 -1 which makes it -2147483648, which is within the limit of a signed int.
+
+101-keygen.c - This source file, was ...something. The first challenge I
+encountered was figuring out what kind of password the 101-crackme executable
+wanted. By decompiling the file, I found that the length of the password does
+not matter. The requirement is that the sum of the ASCII code of the characters
+in the password had to be 2772. So, by using an array to store the characters,
+I could check the sum, and alter them if needed using pointer arithmetic and
+dereference.
