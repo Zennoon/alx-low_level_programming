@@ -55,3 +55,9 @@ the value in that address is lowercase or not. If it is, it is converted to
 uppercase using ASCII code manipulation. In summary, a string declared as a
 pointer can not be mutated, but if it is declared as an array, its characters
 can be mutated.
+
+6-cap_string.c: We go through the string on character at a time, and check if
+it is a separator character using is_separator function. If it is, we check if
+the next character in the string is a lowercase letter. If so, we capitalize it
+and skip one iteration because the next character in the loop is the one we
+just capitalized, so no point in checking. Just optimizing where I can :).
