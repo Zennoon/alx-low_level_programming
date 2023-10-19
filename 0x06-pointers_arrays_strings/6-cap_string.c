@@ -34,6 +34,7 @@ int is_separator(char c)
  * Description: There are predefined word separators given. Each time these are
  * encountered, if the next character is a letter, it is the start of a new
  * word, so the function capitalizes it
+ * Return: A pointer to s
  */
 char *cap_string(char *s)
 {
@@ -41,7 +42,11 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i]; i++)
 	{
-		if (is_separator(s[i]) && (s[i + 1] >= 97 && s[i + 1] <= 122))
+		if ((i == 0 && (s[i] >= 97 && s[i] <= 122)))
+		{
+			s[i] -= 32;
+		}
+		else if ((is_separator(s[i]) && (s[i + 1] >= 97 && s[i + 1] <= 122)))
 		{
 			s[i + 1] -= 32;
 			i++;
