@@ -3,7 +3,7 @@
 int get_length(char *);
 
 /**
- * _strncpy - Concatenates a specified number of bytes of string 2 to string 1
+ * _strncat - Concatenates a specified number of bytes of string 2 to string 1
  * @dest: The string which another string is being concatenated to
  * @src: The string of which characters will be concatenated to dest
  * @n: The number of bytes of src to concatenate to dest
