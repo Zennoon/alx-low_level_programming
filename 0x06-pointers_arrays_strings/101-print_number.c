@@ -46,14 +46,15 @@ int calc_power(int base, int exp)
  */
 void print_number(int n)
 {
+	int digits;
+        int i;
+        int curr_digit;
+	
 	if (n < 0)
 	{
 		_putchar('-');
 		n *= -1;
 	}
-	int digits;
-	int i;
-	int curr_digit;
 
 	digits = get_digits(n);
 	for (i = digits - 1; i >= 0; i--)
