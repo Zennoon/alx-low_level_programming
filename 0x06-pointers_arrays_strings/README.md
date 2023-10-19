@@ -68,3 +68,13 @@ condition. We go through the string one character at a time, for each character,
  we check if it is part of "AEOTL" or "aeotl" using another loop, if it is, we
  grab which index of those strings it matches with and replace it with that
  index in "43071".
+
+100-rot13.c: The concepts used are pretty much the same as the previous task.
+One thing that challenged me for a while was forgetting or not thinking about
+breaking the inner loop once one match for a character was found. This was
+messing up the encoded string by re-encoding (which REALLY is decoding) some
+characters. Take 'a' for example, once the match is found at letters[0], it
+is replaced with encoded[0] which is 'n'. Then, if we don't break, the loop
+will continue, then the replaced character ('n'), is matched again with
+letters[13] ('n'), and replaced again with encoded[13], which is 'a', so we
+are back where we started.
