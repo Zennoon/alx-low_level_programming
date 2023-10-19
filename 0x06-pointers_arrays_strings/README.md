@@ -15,3 +15,17 @@ number of bytes (characters) to concat from src string to dest string. If this
 number is greater than the src string length, it is reduced to the length. Then
 n bytes (characters) of src string are appended to dest string, and finally, the
 '\0' is added for reasons stated in the 0-strcat.c description.
+
+2-strncpy.c: Copies the first n bytes (characters (bc char is 1 byte)) of src
+into dest. Necessarily, dest has to be large enough to accept n bytes or else
+buffer overrun will occur. There are two cases:
+       1. n <= len(src): In this case, the first n bytes of dest are replaced
+       with the first n bytes of src. The rest are left as is.
+
+       2. n > len(src): Here, the first len(src) characters are replaced with
+       src characters (except its '\0' character). Then, the rest (n - len(src))
+        bytes are replaced with '\0' characters
+
+In both cases, necessarily all n characters of dest are replaced, either with
+characters of src or '\0'.
+
