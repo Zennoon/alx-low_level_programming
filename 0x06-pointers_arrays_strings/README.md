@@ -29,3 +29,17 @@ buffer overrun will occur. There are two cases:
 In both cases, necessarily all n characters of dest are replaced, either with
 characters of src or '\0'.
 
+3-strcmp.c: In this source file, we are comparing two strings character by
+character. Once we find an index where their characters are not equal, we
+return the difference of their ASCII code (which would be greater than 0
+if s1 > s2 and less than 0 if s1 < s2). If one or both strings terminate
+without us finding a difference, we check if one of them is still not terminated
+ and if so, grab the ASCII code of the first of the remaining characters.
+ If both are terminated, we return 0.
+    	 Eg. s1 = "Hedge" and s2 = "Hello" : The first index of difference is 2.
+	 s1[2] is 'd' with ascii code 100, s2[2] is 'l' with ascii code 108,
+	 their difference (-8) is returned, indicating s1 < s2
+
+	 s1 = "Hell" and s2 = "Hello" : s1 terminates without us finding a
+	 difference, but s2 still has 'o' with ascii code 111. 111 is returned
+
