@@ -54,9 +54,12 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
+		num = n * -1;
 	}
-
-	num = +n;
+	else
+	{
+		num = +n;
+	}
 	digits = get_digits(num);
 	for (i = digits - 1; i >= 0; i--)
 	{
