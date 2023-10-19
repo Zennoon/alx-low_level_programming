@@ -14,11 +14,11 @@ char *rot13(char *s)
 	int len = sizeof(letters) / sizeof(char);
 	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i]; i++)
 	{
 		int j;
 
-		for (j = 0; j < 52; j++)
+		for (j = 0; j < len; j++)
 		{
 			if (s[i] == letters[j])
 			{
