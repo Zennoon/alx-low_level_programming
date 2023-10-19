@@ -49,3 +49,9 @@ declaring an array with variable length, so I decided to use 2 pointers, one
 coming from the beginning to the middle, and the other coming from the last
 to the middle. These pointers swap their values along the way.
 
+5-string_toupper.c: The string uses a pointer to loop through the string (using
+pointer arithmetic), and each time, it dereferences the pointer and checks if
+the value in that address is lowercase or not. If it is, it is converted to
+uppercase using ASCII code manipulation. In summary, a string declared as a
+pointer can not be mutated, but if it is declared as an array, its characters
+can be mutated.
