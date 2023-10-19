@@ -56,8 +56,15 @@ uppercase using ASCII code manipulation. In summary, a string declared as a
 pointer can not be mutated, but if it is declared as an array, its characters
 can be mutated.
 
-6-cap_string.c: We go through the string on character at a time, and check if
+6-cap_string.c: We go through the string one character at a time, and check if
 it is a separator character using is_separator function. If it is, we check if
 the next character in the string is a lowercase letter. If so, we capitalize it
 and skip one iteration because the next character in the loop is the one we
 just capitalized, so no point in checking. Just optimizing where I can :).
+
+7-leet.c: The challenge on this one was using only 2 loops and 1 if condition,
+this was managed by checking lowercase and uppercase variants in the same if
+condition. We go through the string one character at a time, for each character,
+ we check if it is part of "AEOTL" or "aeotl" using another loop, if it is, we
+ grab which index of those strings it matches with and replace it with that
+ index in "43071".

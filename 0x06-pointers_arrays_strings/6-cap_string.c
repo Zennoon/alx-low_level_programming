@@ -33,7 +33,8 @@ int is_separator(char c)
  *
  * Description: There are predefined word separators given. Each time these are
  * encountered, if the next character is a letter, it is the start of a new
- * word, so the function capitalizes it
+ * word, so the function capitalizes it. The first if condition is to check if
+ * the first character is a lowercase letter
  * Return: A pointer to s
  */
 char *cap_string(char *s)
