@@ -11,4 +11,6 @@ char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *);
 char *rot13(char *);
+int get_digits(int);
+void print_number(int);
 #endif
