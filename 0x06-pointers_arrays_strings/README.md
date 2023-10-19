@@ -1,3 +1,17 @@
 This directory was created on Oct 19, 2023 to hold my answers / submissions for
 project 0x06. C - More pointers, arrays and strings of the ALX SE foundations
 program.
+
+0-strcat.c: This source file concatenates two strings, and returns a pointer to
+the destination string (which can be the string name itself, it is a constant
+pointer to the first character.). It first gets the length of both strings, and
+starts from len1 index (which is last character, ('\0')) of destination string,
+which overwrites the null character and concatenates until len2 (length of the
+second string is reached). Finally, it appends '\0' to the destination string
+because its original was overwritten.
+
+1-strncat.c: Really similar to 1-strcat.c, except this time we are given the
+number of bytes (characters) to concat from src string to dest string. If this
+number is greater than the src string length, it is reduced to the length. Then
+n bytes (characters) of src string are appended to dest string, and finally, the
+'\0' is added for reasons stated in the 0-strcat.c description.
