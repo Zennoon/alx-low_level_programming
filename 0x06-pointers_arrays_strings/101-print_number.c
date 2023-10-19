@@ -47,19 +47,20 @@ int calc_power(int base, int exp)
 void print_number(int n)
 {
 	int digits;
-        int i;
-        int curr_digit;
-	
+	unsigned int num;
+	int i;
+	int curr_digit;
+
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
 	}
 
-	digits = get_digits(n);
+	num = +n;
+	digits = get_digits(num);
 	for (i = digits - 1; i >= 0; i--)
 	{
-		curr_digit = (n / calc_power(10, i)) % 10;
+		curr_digit = (num / calc_power(10, i)) % 10;
 		_putchar('0' + curr_digit);
 	}
 }
