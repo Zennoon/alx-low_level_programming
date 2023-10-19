@@ -9,18 +9,18 @@
  */
 void reverse_array(int *a, int n)
 {
-	int rev_a[n];
-	int *ptr;
+	int *ptr1;
+	int *ptr2;
 	int i;
 
-	ptr = (a + n - 1);
-	for (i = 0; i < n; i++)
+	ptr1 = a;
+	ptr2 = a + (n - 1);
+	for (i = 0; i < (n / 2); i++)
 	{
-		rev_a[i] = *ptr;
-		ptr--;
-	}
-	for (i = 0; i < n; i++)
-	{
-		a[i] = rev_a[i];
+		int temp = *ptr1;
+		*ptr1 = *ptr2;
+		*ptr2 = temp;
+		ptr1++;
+		ptr2--;
 	}
 }

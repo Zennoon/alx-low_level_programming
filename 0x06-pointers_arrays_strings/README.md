@@ -43,6 +43,9 @@ without us finding a difference, we check if one of them is still not terminated
 	 s1 = "Hell" and s2 = "Hello" : s1 terminates without us finding a
 	 difference, but s2 still has 'o' with ascii code 111. 111 is returned
 
-4-rev_array.c: This source file uses a temporary array to hold the values of
-the original array reversed. Then, it sets each element of a to an element of
-the reverse array of the same index.
+4-rev_array.c: This source file originally used a temporary array to hold the
+values of the original array reversed. But, the C90 standard, disallows
+declaring an array with variable length, so I decided to use 2 pointers, one
+coming from the beginning to the middle, and the other coming from the last
+to the middle. These pointers swap their values along the way.
+
