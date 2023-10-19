@@ -43,3 +43,6 @@ without us finding a difference, we check if one of them is still not terminated
 	 s1 = "Hell" and s2 = "Hello" : s1 terminates without us finding a
 	 difference, but s2 still has 'o' with ascii code 111. 111 is returned
 
+4-rev_array.c: This source file uses a temporary array to hold the values of
+the original array reversed. Then, it sets each element of a to an element of
+the reverse array of the same index.
