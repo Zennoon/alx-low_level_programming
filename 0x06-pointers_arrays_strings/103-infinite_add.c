@@ -26,6 +26,7 @@ int get_length(char *s)
 /**
  * fill_lead_0s - Copies a integer string filling missing bytes with 0
  * @s: The string to be copied
+ * @cpy: Where the new string will be stored
  * @len: The length of s
  * @n: The length of the resulting string (len + the number of leading zeros)
  *
@@ -45,11 +46,35 @@ char *fill_lead_0s(char *s, char *cpy, int len, int n)
 		cpy[i] = s[j];
 		i++;
 	}
-       	return (cpy);
+	return (cpy);
 }
 
 /**
- * infinite_sum - Computes and returns the sum of two integers inside strings
+ * _add - Add two ints stored inside strings and stores the result in a string
+ * @num1: First operand
+ * @num2: Second operand
+ * @sum: Where the sum will be stored
+ *
+ * Return: void
+ */
+void _add(char *num1, char *num2, char *sum)
+{
+	int i = 0;
+	int carry = 0;
+
+	for (i = 99; i >= 0; i--)
+	{
+		int curr_sum = num1[i] - 48 + num2[i] - 48 + carry;
+
+		carry = curr_sum / 10;
+		curr_sum = curr_sum % 10;
+		sum[i] = curr_sum + 48;
+	}
+	sum[100] = '\0';
+}
+
+/**
+ * infinite_add - Computes and returns the sum of two integers inside strings
  * @n1: First operand to be added
  * @n2: Second operand
  * @r: The buffer where the sum will be stored
@@ -59,22 +84,14 @@ char *fill_lead_0s(char *s, char *cpy, int len, int n)
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int len1, len2, carry, i, num_count , is_number, j;
+	int len1, len2, i, num_count, is_number, j;
 	char num1[100], num2[100], sum[101];
 
 	len1 = get_length(n1);
 	len2 = get_length(n2);
 	fill_lead_0s(n1, num1, len1, 100);
 	fill_lead_0s(n2, num2, len2, 100);
-	carry = 0;
-	for (i = 99; i >= 0; i--)
-	{
-		int curr_sum = num1[i] - 48 + num2[i] - 48 + carry;
-		carry = curr_sum / 10;
-		curr_sum = curr_sum % 10;
-		sum[i] = curr_sum + 48;
-	}
-	sum[100] = '\0';
+	_add(num1, num2, sum);
 	num_count = 0;
 	is_number = 0;
 	for (i = 0; i < 100; i++)
@@ -91,7 +108,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	num_count = num_count == 0 ? 1 : num_count;
 	if (size_r < num_count + 1)
 	{
-		return NULL;
+		return (NULL);
 	}
 	else
 	{
