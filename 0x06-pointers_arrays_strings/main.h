@@ -13,5 +13,5 @@ char *leet(char *);
 char *rot13(char *);
 int get_digits(int);
 void print_number(int);
-char *infinite_sum(char *, char *, char *, int);
+char *infinite_add(char *, char *, char *, int);
 #endif

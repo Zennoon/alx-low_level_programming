@@ -57,7 +57,7 @@ char *fill_lead_0s(char *s, char *cpy, int len, int n)
  *
  * Return: r if size_r >= size of the sum, 0 otherwise
  */
-char *infinite_sum(char *n1, char *n2, char *r, int size_r)
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int len1, len2, carry, i, num_count , is_number, j;
 	char num1[100], num2[100], sum[101];
@@ -91,8 +91,7 @@ char *infinite_sum(char *n1, char *n2, char *r, int size_r)
 	num_count = num_count == 0 ? 1 : num_count;
 	if (size_r < num_count + 1)
 	{
-		r[0] = '0';
-		r[1] = '\0';
+		return NULL;
 	}
 	else
 	{
