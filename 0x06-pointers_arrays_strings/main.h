@@ -14,4 +14,5 @@ char *rot13(char *);
 int get_digits(int);
 void print_number(int);
 char *infinite_add(char *, char *, char *, int);
+void print_buffer(char *, int);
 #endif
