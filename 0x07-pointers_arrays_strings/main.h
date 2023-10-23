@@ -2,4 +2,5 @@
 #define MAIN_H
 
 int _putchar(char);
+char *_memset(char *, char, int);
 #endif
