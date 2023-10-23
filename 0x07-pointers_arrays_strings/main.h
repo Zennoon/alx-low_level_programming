@@ -3,4 +3,5 @@
 
 int _putchar(char);
 char *_memset(char *, char, int);
+char *_memcpy(char *, char *, int);
 #endif
