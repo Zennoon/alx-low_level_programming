@@ -38,3 +38,32 @@ the next len_ndl character (if they match with needle) using _strncmp.
 7-print_chessboard.c: Pretty straightforward. The function uses two for loops,
 one of which is nested inside another, to print the elements of a 2D 8*8 array
 in chessboard format.
+
+8-print_diagsums.c: This function challenges us to visualize how a 2D array is
+stored in memory. Actually, it is just like a 1D array, except each arr[i] can
+now be used as a pointer to the first element of that row. The catch here is
+that the array is passed to the function as an ordinary pointer with no second
+indexing like a 2D array. If we imagine a 2D array:
+	 int arr[3][3] = {
+	     {1, 2, 3},
+	     {4, 5, 6},
+	     {7, 8, 9}
+	     }
+	     This array is represented in memory contigiously like so:
+	     1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9
+	     In our case, the array is passed to us only as a pointer to the
+	     first element. But, we can access any element inside using simple
+	     maths.
+	     If we want to access arr[i][j], with arr as a pointer, we use
+	     *(arr + (i * size + j))
+	     So, in a square matrix, to access the left to right diagonal, since
+	     i = j (arr[0][0], arr[1][1], arr[2][2]...), we use
+	     *(arr + ((i * size) + i)), where i runs from 0 to size - 1
+	     For the right to left diagonal, if we look at the elements of the
+	     diagonal, we notice a pattern. arr[0][size - 1], arr[1][size - 2],
+	     arr[2][size - 3], ..., arr[size - 1][0]. From this pattern, we see
+	     that the second index (j) is always (size - 1 - i). If we replace
+	     this, in the original formula, we get
+	     *(arr + ((i * size) + size - 1 - i)), i running from 0 to size - 1
+
+Using these formulas, we access the diagonal elements and compute the sums
