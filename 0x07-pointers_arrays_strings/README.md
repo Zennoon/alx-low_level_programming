@@ -66,4 +66,11 @@ indexing like a 2D array. If we imagine a 2D array:
 	     this, in the original formula, we get
 	     *(arr + ((i * size) + size - 1 - i)), i running from 0 to size - 1
 
-Using these formulas, we access the diagonal elements and compute the sums
+Using these formulas, we access the diagonal elements and compute the sums.
+
+100-set_string.c: This function's intention is to change the value of a pointer
+from the address of one character, to another using a pointer to that pointer.
+Basically, the first pointer carries an address to a character (1st of a string)
+, the double pointer carries an address to the 1st pointer whose value is an
+address. If we dereference the double pointer, we get the value of the first
+pointer. We can then set this value to another address.
