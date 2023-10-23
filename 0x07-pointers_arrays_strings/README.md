@@ -22,3 +22,9 @@ the pointer which we were using to loop the string.
 if the current character is in another string using the above function _strchr,
 if it is, it increments a variable, if not, it breaks the loop. At the end, it
 returns that count variable.
+
+4-strpbrk.c: This function finds the first occurence in s, of any character in
+accept, and returns a pointer to it. This one also uses the _strchr function
+from task 2. For every character in s, it checks if it is found in accept,
+using _strchr. If it is in accept, it returns a pointer to that character.
+After checking each character, if no match is found, it returns NULL.
