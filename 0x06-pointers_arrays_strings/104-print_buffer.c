@@ -28,7 +28,7 @@ void print_buffer(char *b, int size)
 		{
 			int lim;
 
-			printf("%p: ", (void*) &b[i]);
+			printf("%08x: ", index);
 			lim = index + 10;
 			while (i < lim)
 			{
