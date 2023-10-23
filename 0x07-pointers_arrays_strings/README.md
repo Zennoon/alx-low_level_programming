@@ -17,3 +17,8 @@ returns a pointer to the first occurence of it. If not found, it returns NULL.
 It uses the null terminator as the limit to the loop, until '\0' is encountered,
 each character is checked. If the current character is the desired one, return
 the pointer which we were using to loop the string.
+
+3-strspn.c: This function starts from the beginning of a given string and checks
+if the current character is in another string using the above function _strchr,
+if it is, it increments a variable, if not, it breaks the loop. At the end, it
+returns that count variable.
