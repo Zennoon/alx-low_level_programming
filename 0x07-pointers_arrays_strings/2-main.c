@@ -13,11 +13,15 @@ int main(void)
 	char *s = "Hello";
 	char *f;
 
-	f = _strchr(s, 'l');
+	f = _strchr(s, 's');
 
 	if (f != NULL)
 	{
 		printf("%s\n", f);
+	}
+	else
+	{
+		printf("Hello\n");
 	}
 	return (0);
 }
