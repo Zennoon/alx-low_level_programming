@@ -28,7 +28,7 @@ void print_buffer(char *b, int size)
 		{
 			int lim;
 
-			printf("%p: ", (void *) &b[i]);
+			printf("%p: ", (void*) &b[i]);
 			lim = index + 10;
 			while (i < lim)
 			{
@@ -47,17 +47,24 @@ void print_buffer(char *b, int size)
 				}
 				i++;
 			}
-			while (j < lim && j < size)
+			while (j < lim)
 			{
-				if (*char_ptr >= 32 && *char_ptr <= 126)
+				if (j < size)
 				{
-					printf("%c", *char_ptr);
+					if (*char_ptr >= 32 && *char_ptr <= 126)
+					{
+						printf("%c", *char_ptr);
+					}
+					else
+					{
+						printf(".");
+					}
+					char_ptr++;
 				}
 				else
 				{
-					printf(".");
-					}
-				char_ptr++;
+					printf(" ");
+				}
 				j++;
 			}
 			printf("\n");
