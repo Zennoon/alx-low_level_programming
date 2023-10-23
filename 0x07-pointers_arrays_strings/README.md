@@ -11,3 +11,9 @@ one. In other terms, it copies one memory area to another. It uses the same
 concept as 0-memset.c, except, the loop variable 'i', is used to access both
 the dest and src memory areas, so we use *(dest + i) = *(src + i), until the
 desired number is reached.
+
+2-strchr.c: This function searches a string for a character. If it is there, it 
+returns a pointer to the first occurence of it. If not found, it returns NULL.
+It uses the null terminator as the limit to the loop, until '\0' is encountered,
+each character is checked. If the current character is the desired one, return
+the pointer which we were using to loop the string.
