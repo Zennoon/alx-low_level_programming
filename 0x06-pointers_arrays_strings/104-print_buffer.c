@@ -61,10 +61,10 @@ void print_buffer(char *b, int size)
 					}
 					char_ptr++;
 				}
-				else
+				/**else
 				{
 					printf(" ");
-				}
+					}**/
 				j++;
 			}
 			printf("\n");
