@@ -11,25 +11,17 @@
 void print_buffer(char *b, int size)
 {
 	if (size <= 0)
-	{
 		printf("\n");
-	}
 	else
 	{
-		char *hex_ptr, *char_ptr;
-		int index, i, j;
+		char *hex_ptr = b, *char_ptr = b;
+		int index = 0, i = 0, j = 0;
 
-		hex_ptr = b;
-		char_ptr = b;
-		index = 0;
-		i = 0;
-		j = 0;
 		while (index < size)
 		{
-			int lim;
+			int lim = index + 10;
 
 			printf("%08x: ", index);
-			lim = index + 10;
 			while (i < lim)
 			{
 				if (i < size)
@@ -38,33 +30,18 @@ void print_buffer(char *b, int size)
 					hex_ptr++;
 				}
 				else
-				{
 					printf("  ");
-				}
 				if (i % 2)
-				{
 					printf(" ");
-				}
 				i++;
 			}
-			while (j < lim)
+			while (j < lim && j < size)
 			{
-				if (j < size)
-				{
-					if (*char_ptr >= 32 && *char_ptr <= 126)
-					{
-						printf("%c", *char_ptr);
-					}
-					else
-					{
-						printf(".");
-					}
-					char_ptr++;
-				}
-				/**else
-				{
-					printf(" ");
-					}**/
+				if (*char_ptr >= 32 && *char_ptr <= 126)
+					printf("%c", *char_ptr);
+				else
+					printf(".");
+				char_ptr++;
 				j++;
 			}
 			printf("\n");
