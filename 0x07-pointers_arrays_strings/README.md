@@ -28,3 +28,13 @@ accept, and returns a pointer to it. This one also uses the _strchr function
 from task 2. For every character in s, it checks if it is found in accept,
 using _strchr. If it is in accept, it returns a pointer to that character.
 After checking each character, if no match is found, it returns NULL.
+
+5-strstr.c: This function searches a string for another string. If found, it
+returns a pointer to the substring that matches the search string. Here, we use
+_strlen to find the length of the searched and the searched for strings to help
+with the looping and avoid segmentation fault. For each character, we check if
+the next len_ndl character (if they match with needle) using _strncmp.
+
+7-print_chessboard.c: Pretty straightforward. The function uses two for loops,
+one of which is nested inside another, to print the elements of a 2D 8*8 array
+in chessboard format.
