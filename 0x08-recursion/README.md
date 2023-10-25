@@ -17,3 +17,6 @@ string).
 2-strlen_recursion: The function uses the concept of pointer arithmetic and the
 fact that (if s is a string/char pointer) length of s = 1 + (s + 1) and length
 of "" is 0 (Base case).
+
+3-factorial.c: The classic! Uses the fact that 0! = 1 as the base case, and
+n! = n * (n - 1)! as our recursive path
