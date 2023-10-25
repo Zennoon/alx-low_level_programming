@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -7,7 +8,7 @@
  * Description: The next guess is (prev + (n / prev)) / 2
  * Return: The next guess
  */
-int get_next_guess(int n, int prev)
+int get_next_guess(unsigned int n, unsigned prev)
 {
 	return ((prev + (n / prev)) / 2);
 }
@@ -19,16 +20,13 @@ int get_next_guess(int n, int prev)
  *
  * Return: If n is a valid perfect square, the sqrt of n. Otherwise, -1
  */
-int test_sqrt(int n, int guess)
+int test_sqrt(unsigned int n, unsigned long guess)
 {
-	int sqr;
-
-	sqr = guess * guess;
-	if (n < 0 || sqr < n)
+	if (n > guess * guess)
 	{
 		return (-1);
 	}
-	if (n == sqr)
+	if (n == guess * guess)
 	{
 		return (guess);
 	}
@@ -43,8 +41,12 @@ int test_sqrt(int n, int guess)
  */
 int _sqrt_recursion(int n)
 {
-	int init_guess;
+	unsigned long init_guess;
 
+	if (n < 0)
+	{
+		return (-1);
+	}
 	init_guess = n;
-	return (test_sqrt(n, init_guess));
+	return (test_sqrt((unsigned) n, init_guess));
 }
