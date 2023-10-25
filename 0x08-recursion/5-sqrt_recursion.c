@@ -8,7 +8,7 @@
  * Description: The next guess is (prev + (n / prev)) / 2
  * Return: The next guess
  */
-int get_next_guess(unsigned int n, unsigned prev)
+int get_next_guess(unsigned int n, unsigned int prev)
 {
 	return ((prev + (n / prev)) / 2);
 }
@@ -48,5 +48,5 @@ int _sqrt_recursion(int n)
 		return (-1);
 	}
 	init_guess = n;
-	return (test_sqrt((unsigned) n, init_guess));
+	return (test_sqrt((unsigned int) n, init_guess));
 }
