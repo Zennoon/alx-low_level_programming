@@ -20,3 +20,6 @@ of "" is 0 (Base case).
 
 3-factorial.c: The classic! Uses the fact that 0! = 1 as the base case, and
 n! = n * (n - 1)! as our recursive path
+
+4-pow_recursion.c: As a base case, it uses the concept x ^ 0 = 1, and to define
+the recursion, it uses the concept x ^ y = x * (x ^ (y - 1))
