@@ -36,3 +36,8 @@ perfect square and we return -1.
 I could also have used a more slower approach by starting with n as the initial
 guess and decrementing the guess by 1 each time until the guess squared is equal
 to or greater than n. If less than, it would mean n is not a perfect square.
+
+6-is_prime.c: The function behaves just like a loop, with each recursion, the
+number is checked for divisibility with the previous checked number + 1. I am
+pretty certain that there is a much more efficient way to go about this than
+incrementing by 1. I just have to find a pattern within prime numbers.
