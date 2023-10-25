@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * check_prime - Gets a valid int from is_prime_number and checks if it is prime
+ * check_prime - Gets a valid int from is_prime_number and checks if prime
  * @n: The number to check
  * @d: The number to divide n with
  *
@@ -21,7 +21,7 @@ int check_prime(int n, int d)
 }
 
 /**
- * is_prime - Checks if a given integer is prime or not
+ * is_prime_number - Checks if a given integer is prime or not
  * @n: The integer to be checked
  *
  * Return: 1 if n is prime, 0 otherwise
