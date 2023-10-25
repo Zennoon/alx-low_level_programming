@@ -41,3 +41,12 @@ to or greater than n. If less than, it would mean n is not a perfect square.
 number is checked for divisibility with the previous checked number + 1. I am
 pretty certain that there is a much more efficient way to go about this than
 incrementing by 1. I just have to find a pattern within prime numbers.
+
+100-is_palindrome.c: The function passes the string to check_palindrome which
+expects 2 arguments, a pointer to the first character, and a pointer to the last
+ character. Then, by each recursion, move 'start' one memory area forward, and
+ 'end' one memory area backwards until the address stored in 'start' equals or
+ exceeds the address stored in 'end' which would mean that we have reached the
+ middle of the string with out finding an inequality, then the string is a
+ palindrome.
+
