@@ -13,3 +13,7 @@ printing, so, once we have reached '\0', we are done with the recursions, and
 start executing the line after the recursive calls (_putchar), printing one
 character at a time upwards to the first function call (which has the full
 string).
+
+2-strlen_recursion: The function uses the concept of pointer arithmetic and the
+fact that (if s is a string/char pointer) length of s = 1 + (s + 1) and length
+of "" is 0 (Base case).
