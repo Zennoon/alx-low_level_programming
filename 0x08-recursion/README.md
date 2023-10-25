@@ -7,3 +7,9 @@ a char), we print the value of the pointer (the char), then pass the rest of
 the string by using pointer arithmetic (s + 1). This goes on until the value
 of the pointer passed is '\0', in which case a newline is printed and void
 is returned.
+
+1-print_rev_recursion.c: The function does the recursive call before the
+printing, so, once we have reached '\0', we are done with the recursions, and
+start executing the line after the recursive calls (_putchar), printing one
+character at a time upwards to the first function call (which has the full
+string).
