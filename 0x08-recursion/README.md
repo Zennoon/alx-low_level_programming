@@ -23,3 +23,16 @@ n! = n * (n - 1)! as our recursive path
 
 4-pow_recursion.c: As a base case, it uses the concept x ^ 0 = 1, and to define
 the recursion, it uses the concept x ^ y = x * (x ^ (y - 1))
+
+5-sqrt_recursion.c: I had to research this a bit, because I had no idea how to
+calculate the sqrt of a number in a recursive way. In retrospect, the only
+thing I was missing is that I could use another function for the recursion.
+In this function, an efficient method is used where starting from n itself as
+the initial guess, we check if it is the sqrt of n, then the next guess is:
+   	 (prev_guess + (n / prev_guess)) / 2
+Then, recursively we check if this new guess is the sqrt of n, and so on. If
+at any point the guess squared is less than n, that means that n is not a
+perfect square and we return -1.
+I could also have used a more slower approach by starting with n as the initial
+guess and decrementing the guess by 1 each time until the guess squared is equal
+to or greater than n. If less than, it would mean n is not a perfect square.
