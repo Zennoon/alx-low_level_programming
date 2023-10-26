@@ -50,3 +50,25 @@ expects 2 arguments, a pointer to the first character, and a pointer to the last
  middle of the string with out finding an inequality, then the string is a
  palindrome.
 
+101-wild_cmp.c: Honestly, this one is better understood by just reading the code
+but, I will try to explain to my ability. I took my inspiration from a
+reference on stackoverflow to a oneliner code for globbing wildcards. Basically,
+we are trying to compare the 'equality' of 2 strings, but one of them may have
+the '*' wildcard character inside which may represent 0 or more characters.
+    So for example: "hello" and "he*o" are equal, so are "hello" and "he**llo"
+Let's first ignore the existence of the wildcard (one can only dream), then,
+the simpest case we could receive is if one of the strings is empty. Then we
+return !(length of the other string). If this length is 0, we return 1 (the !),
+if not, that would mean one string is longer than the other, and we return 0.
+This is our base case. Then, if the first characters of the strings are the
+same, we recursively call the function and pass the incremented strings (to
+check the next character) and so on. The only complication left here, is the '*'
+which could represent 0, 1, or multiple characters. Based on this, if we
+encounter '*', we account for two scenarios. 1. The * represents 0 characters.
+or 2. The * represents 1 character or more. It is one of the two scenarios. So,
+our recursive call becomes:
+    	      return (wildcmp(s1, s2 + 1) || (*s1 && (wildcmp(s1 + 1, s2))));
+	                    ^             or              ^
+			    |                             |
+		The * represents 0 characters       The * represents 1 character
+		so we jump it.                      so we pass one char from s1.
