@@ -17,3 +17,8 @@ on it.
 2-args.c: The function prints all the arguments (including the first one AKA
 the program name), which are the elements of the argv array (in string form)
 and the length of argv is argc, so we just loop.
+
+3-mul.c: The function prints the product of two command line arguments passed
+after the program name, by first converting them to integers (using atoi). If
+more or less than two arguments are passed, it prints "Error", and exits with
+a failure status.
