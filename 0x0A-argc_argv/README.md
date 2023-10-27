@@ -13,3 +13,7 @@ run. argc counts the program name as well, so we have to decrement it to get
 the correct value. The argv parameter is unused inside the function, so to
 suppress the 'Unused variable' warning/error, I have set the unused attribute
 on it.
+
+2-args.c: The function prints all the arguments (including the first one AKA
+the program name), which are the elements of the argv array (in string form)
+and the length of argv is argc, so we just loop.
