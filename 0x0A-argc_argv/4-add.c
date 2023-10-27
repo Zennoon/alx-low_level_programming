@@ -33,6 +33,7 @@ int _atoi(char *s)
 	}
 	return (num * sign);
 }
+
 /**
  * main - The entry point of the program
  * @argc: Argument count

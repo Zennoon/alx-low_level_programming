@@ -29,9 +29,20 @@ prints "Error" and returns 1. The trick here is converting the strings to
 ints using _atoi. If _atoi encouters a non-digit string, it returns 0,
 so we can use that, The problem is, when _atoi encounters "0", which is a valid
 digit string, it returns 0 too. So, to check if a string is non-digit, we check
-if it not "0", and if _atoi of that string returns 0. I have used my own _atoi 
+if it not "0", and if _atoi of that string returns 0. I have used my own _atoi
 function because the standard function atoi checks for the initial part of the
 string, and if it encounters a non-digit, it returns the number it found until
 that character, so for example, atoi("123abc"), would return 123, whereas my
 implementation checks the entire string and if it finds a single non-digit char
 it returns 0, regardless of previously found digits.
+
+100-change.c: The function gets a value of cents from the command line and calcs
+the minimum number of coins of value 25, 10, 5, 2, or 1 it would take to make
+change for that amount of cents. First we check the validity of the command line
+argument, we convert it into an int, and then, starting from 25, and going down
+to 1, we see how many of each coin the given amount of cents can take. If we
+take 40 cents for example, we can have one 25 cents coin, then we are left with
+15 cents (40 % 25). We can have one 10 cents coin, then we have 5 cents
+remaining (15 % 10). We can have one 5 cents coin, we are left with 0 cents
+(5 % 5). We can't have any 2 cents coin or 1 cent coin, because we have 0 cents
+remaining, so in total, it took us 3 coins to make change for 40 cents.
