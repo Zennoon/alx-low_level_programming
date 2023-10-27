@@ -22,3 +22,14 @@ and the length of argv is argc, so we just loop.
 after the program name, by first converting them to integers (using atoi). If
 more or less than two arguments are passed, it prints "Error", and exits with
 a failure status.
+
+4-add.c: The function prints the sum of the command line arguments after they
+have been converted to an int. If any of the arguments is not a digit, it
+prints "Error" and returns 1. The trick here is converting the strings to
+ints using atoi. If atoi encouters a non-digit string (a string that begins
+with a non-digit character atleast), it returns 0, so we can use that, The
+problem is, when atoi encounters "0", which is a valid digit string, it returns
+0 too. So, to check if a string is non-digit, we check if it not "0", and if
+atoi of that string returns 0. This function is not very reliable though, as
+atoi checks for the initial part of the string, and not its entirety if it has
+a non-digit character, so for example, atoi("123abc"), would return 123.
