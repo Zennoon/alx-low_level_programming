@@ -51,3 +51,14 @@ Hopefully, you will understand it better by just looking at the code.
 4-free_grid.c: This function frees up the memory allocated by malloc to create
 the 2D array from the previous task. First, it frees up the inner allocations,
 or the 'rows', then it frees the pointer to these pointers.
+
+100-argstostr.c: This function concatenates the command line arguments passed
+to the program when it is run. These arguments are stored as strings in av.
+First, we calculate the total number of characters in all these arguments, then
+we add ac (argument count) because the task asks that there be '\n' after each
+argument, then finally add 1 for '\0'. And multiply that with sizeof char to get
+the total amount of memory we need to allocate for the entire concatenation.
+Then, for each argument in av, we assign a pointer, then until that pointer
+reaches the null terminator of that argument (string), we add the pointed at
+character to our cat. After each argument, we add '\n'. After finishing all
+the arguments, we finally add the null terminator character.
