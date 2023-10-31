@@ -12,6 +12,10 @@ int _strlen(char *s)
 	int len;
 	char *ptr;
 
+	if (s == NULL)
+	{
+		return (0);
+	}
 	len = 0;
 	ptr = s;
 	while (*ptr)
