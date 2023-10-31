@@ -1,0 +1,11 @@
+This directory was created on Oct 31, 2023 to hold my answers/submissions for
+the project '0x0B. C - malloc, free'
+
+malloc: is a standard library function, that takes as an argument an unsigned
+integer num, and allocates num bytes of memory from the heap (Dynamic memory
+allocation), and returns a pointer to the address of the first byte (base
+address) of that allocated memory.
+
+free: is a standard library function that takes as an argument a pointer to
+a memory area which has been allocated using one of malloc, calloc, or realloc
+and frees that memory.
