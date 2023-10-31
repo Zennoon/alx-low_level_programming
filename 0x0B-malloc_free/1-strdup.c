@@ -39,7 +39,7 @@ char *_strdup(char *s)
 
 	len = _strlen(s);
 	dup = malloc(sizeof(char) * (len + 1));
-	if (!len || dup == NULL)
+	if (s == NULL || dup == NULL)
 	{
 		return (NULL);
 	}
