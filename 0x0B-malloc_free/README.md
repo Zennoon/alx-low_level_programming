@@ -47,3 +47,7 @@ number of integers, we can access these integers as two_d_arr[x][y]. And this is
 basically what the 2D array is; a pointer to an allocated area containing
 pointers, each of which point to an allocated area containing integers.
 Hopefully, you will understand it better by just looking at the code.
+
+4-free_grid.c: This function frees up the memory allocated by malloc to create
+the 2D array from the previous task. First, it frees up the inner allocations,
+or the 'rows', then it frees the pointer to these pointers.

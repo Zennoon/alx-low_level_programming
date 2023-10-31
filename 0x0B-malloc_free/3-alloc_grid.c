@@ -2,23 +2,6 @@
 #include "main.h"
 
 /**
- * free_grid - Frees the memory allocated to the grid if malloc fails
- * @grid: The 2D array/grid to be freed
- * @h: The height of the grid
- *
- * Return: void
- */
-/**void free_grid(int **grid, int h)
-{
-	int i = 0;
-
-	for (i = 0; i < h; i++)
-	{
-		free(grid[i]);
-	}
-	free(grid);
-	}**/
-/**
  * alloc_grid - Allocates memory for a 2d int array of given height & width
  * @width: Width of the created 2D array
  * @height: Height of the created 2D array
