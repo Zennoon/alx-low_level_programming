@@ -33,3 +33,17 @@ starting from the first string, and then the second string, if malloc doesn't
 return NULL, it copies the contents of the strings to the newly allocated memory
 If malloc returns NULL, it is returned as is (NULL). The function is structured
 as this to avoid Segmentation fault incase malloc does return NULL.
+
+3-alloc_grid.c: OOOOH this was an exciting one. The core concept that you have
+to remember here is that malloc returns a pointer to the memory it just
+allocated, and you can store pointers in this memory. Basically, the task is
+creating a 2D array of given width of height. Height can be interpreted as
+number of rows, and width as number of columns. Now, basically a 2D array is an
+array of 1D arrays. So, here is the basic idea: If we create a pointer to a
+pointer of an integer ('two_d_arr'), and allocate it memory enough to store
+'height' pointers to integers, we can then access these pointers as two_d_arr[x] 
+Now, for each of these pointers, if we allocate enough memory to store 'width'
+number of integers, we can access these integers as two_d_arr[x][y]. And this is
+basically what the 2D array is; a pointer to an allocated area containing
+pointers, each of which point to an allocated area containing integers.
+Hopefully, you will understand it better by just looking at the code.
