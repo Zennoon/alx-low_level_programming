@@ -14,3 +14,11 @@ and frees that memory.
 and it allocates memory for n characters using malloc and the sizeof operator,
 and assigns a pointer to the first byte. It then initializes each character with
 the given c char using the pointer.
+
+1-strdup.c: The function accepts a string as an argument and duplicates it using
+dynamic memory allocation. It first gets the string's length from the _strlen
+function, then allocates memory for that many characters + 1 for the '\0'. It
+then copies each character, including the null terminator ('\0') from the
+argument string to the newly allocated memory area. This new string is then
+returned, if everything goes to plan. The allocated memory is deallocated in
+the main function.
