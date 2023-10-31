@@ -8,7 +8,7 @@
  *
  * Return: void
  */
-void free_grid(int **grid, int h)
+/**void free_grid(int **grid, int h)
 {
 	int i = 0;
 
@@ -17,7 +17,7 @@ void free_grid(int **grid, int h)
 		free(grid[i]);
 	}
 	free(grid);
-}
+	}**/
 /**
  * alloc_grid - Allocates memory for a 2d int array of given height & width
  * @width: Width of the created 2D array
@@ -32,7 +32,7 @@ void free_grid(int **grid, int h)
  */
 int **alloc_grid(int width, int height)
 {
-	int i, j;
+	int i, j, k;
 	int **two_d;
 
 	if (height <= 0 || width <= 0)
@@ -47,7 +47,11 @@ int **alloc_grid(int width, int height)
 			two_d[i] = malloc(sizeof(int) * width);
 			if (two_d[i] == NULL)
 			{
-				free_grid(two_d, height);
+				for (k = 0; k < i; k++)
+				{
+					free(two_d[k]);
+				}
+				free(two_d);
 				return (NULL);
 			}
 			for (j = 0; j < width; j++)
