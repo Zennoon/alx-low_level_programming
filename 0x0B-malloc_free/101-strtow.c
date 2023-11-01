@@ -72,10 +72,6 @@ char **strtow(char *s)
 	int word_cnt, i, j, k;
 	char **arr;
 
-	if (!*s || s == NULL)
-	{
-		return (NULL);
-	}
 	word_cnt = count_words(s);
 	arr = malloc(sizeof(char *) * (word_cnt + 1));
 	if (arr != NULL)
@@ -86,6 +82,10 @@ char **strtow(char *s)
 		ptr = s;
 		for (i = 0; i < word_cnt; i++)
 		{
+			while (*ptr == ' ' || *ptr == '\t')
+                        {
+                                ptr++;
+                        }
 			word_len = get_word_length(ptr);
 			arr[i] = malloc(sizeof(char) * (word_len + 1));
 			if (arr[i] == NULL)
@@ -103,10 +103,6 @@ char **strtow(char *s)
 				ptr++;
 			}
 			arr[i][j] = '\0';
-			while (*ptr == ' ' || *ptr == '\t')
-			{
-				ptr++;
-			}
 		}
 		arr[i] = NULL;
 	}
@@ -149,4 +145,14 @@ void free_mem(char **arr)
 	}
 	free(arr[i]);
 	free(arr);
+}
+
+int main(void)
+{
+	char *s = " Talk is cheap. Show me the code. ";
+	char **words = strtow(s);
+
+	print_array(words);
+	free_mem(words);
+	return (0);
 }
