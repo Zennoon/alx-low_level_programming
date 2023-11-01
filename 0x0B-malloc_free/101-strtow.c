@@ -13,6 +13,10 @@ int count_words(char *s)
 	int count;
 	char *ptr;
 
+	if (s == NULL)
+	{
+		return (0);
+	}
 	count = 0;
 	ptr = s;
 	if (*ptr != '\0' && (*ptr != ' ' && *ptr != '\t'))
@@ -73,6 +77,10 @@ char **strtow(char *s)
 	char **arr;
 
 	word_cnt = count_words(s);
+	if (!word_cnt)
+	{
+		return (NULL);
+	}
 	arr = malloc(sizeof(char *) * (word_cnt + 1));
 	if (arr != NULL)
 	{
