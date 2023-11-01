@@ -72,7 +72,7 @@ char **strtow(char *s)
 	int word_cnt, i, j, k;
 	char **arr;
 
-	if (s == "" || s == NULL)
+	if (!*s || s == NULL)
 	{
 		return (NULL);
 	}
