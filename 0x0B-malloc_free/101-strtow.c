@@ -91,9 +91,7 @@ char **strtow(char *s)
 		for (i = 0; i < word_cnt; i++)
 		{
 			while (*ptr == ' ' || *ptr == '\t')
-                        {
-                                ptr++;
-                        }
+				ptr++;
 			word_len = get_word_length(ptr);
 			arr[i] = malloc(sizeof(char) * (word_len + 1));
 			if (arr[i] == NULL)
