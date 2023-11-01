@@ -146,13 +146,3 @@ void free_mem(char **arr)
 	free(arr[i]);
 	free(arr);
 }
-
-int main(void)
-{
-	char *s = " Talk is cheap. Show me the code. ";
-	char **words = strtow(s);
-
-	print_array(words);
-	free_mem(words);
-	return (0);
-}
