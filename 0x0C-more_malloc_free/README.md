@@ -14,3 +14,15 @@ considered when calculating the amount of memory to allocate. In a previous
 implementation, I tried to concat s1, and s2 completely and then realloc to the
 desired amount, but the checker in ALX has checks with limited heap memory that
 would suffice for s1, and n bytes of n2 but not s1 and s2.
+
+2-calloc.c: The function is an implementation of the actual calloc function
+using malloc. We are given the number of members/elements and the size in
+bytes of each element. The thing that most differentiates calloc from malloc
+is that calloc initializes the allocated memory bytes to zero. So, to have
+control on the allocated memory, I have assigned the allocated memory from
+malloc to a char pointer (since chars are 1 byte (on most machines at least))
+so when I do arithmetic on it, it jumps one byte (whereas in int pointers it
+would be 4 bytes and so on). So, for instance, *(arr + 1) would dereference the
+address one byte next to arr. Finally, after initializing the memory to 0, I
+have returned the pointer cast to void, so that it can be promoted to other
+types by the function caller.
