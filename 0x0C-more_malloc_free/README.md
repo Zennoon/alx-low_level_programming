@@ -26,3 +26,8 @@ would be 4 bytes and so on). So, for instance, *(arr + 1) would dereference the
 address one byte next to arr. Finally, after initializing the memory to 0, I
 have returned the pointer cast to void, so that it can be promoted to other
 types by the function caller.
+
+3-array_range.c: The function accepts two numbers as arguments, the first one
+less than or equal to the second, and generates an array in heap memory
+containing all the numbers between those 2 numbers (inclusive). It uses calloc,
+but it could have been implemented by malloc just as easily.
