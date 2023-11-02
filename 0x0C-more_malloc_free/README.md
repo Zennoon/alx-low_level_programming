@@ -9,7 +9,8 @@ INT_MAX amount of mem.
 
 1-string_nconcat.c: The function receives s1, s2, and an integer, and it concats
 s1, and n bytes of s2 and returns the result if successful. If not, it just
-returns NULL. In this implementation, instead of allocating the right amount of
-memory in the start, I have allocated memory enough for both s1 and s2, then
-concatenated the entire strings, and finally used realloc to get only the
-desired bytes number of bytes of s2.
+returns NULL. In this implementation, the minimum of n and the length of s2 is
+considered when calculating the amount of memory to allocate. In a previous
+implementation, I tried to concat s1, and s2 completely and then realloc to the
+desired amount, but the checker in ALX has checks with limited heap memory that
+would suffice for s1, and n bytes of n2 but not s1 and s2.
