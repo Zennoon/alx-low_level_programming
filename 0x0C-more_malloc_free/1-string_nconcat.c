@@ -7,9 +7,9 @@
  *
  * Return: The number of characters in s (0 if NULL or empty)
  */
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
-	int len;
+	unsigned int len;
 	char *ptr;
 
 	len = 0;
@@ -56,12 +56,12 @@ unsigned int get_min(unsigned int n1, unsigned int n2)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len1, len2, i;
+	unsigned int len1, len2, i;
 	char *cat, *ptr;
 
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
-	cat = malloc(sizeof(char) * (len1 + len2 + 1));
+	cat = malloc(sizeof(char) * (len1 + get_min(len2, n) + 1));
 	if (cat == NULL)
 	{
 		return (NULL);
@@ -72,12 +72,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		*ptr = s1[i];
 		ptr++;
 	}
-	for (i = 0; i < len2; i++)
+	for (i = 0; i < len2 && i < n; i++)
 	{
 		*ptr = s2[i];
 		ptr++;
 	}
-	cat = realloc(cat, (sizeof(char) * (len1 + get_min(n, len2) + 1)));
-	cat[len1 + get_min(n, len2)] = '\0';
+        *ptr = '\0';
 	return (cat);
 }
