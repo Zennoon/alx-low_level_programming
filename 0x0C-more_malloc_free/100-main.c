@@ -41,17 +41,18 @@ void simple_print_buffer(char *buffer, unsigned int size)
 int main(void)
 {
 	char *p;
-	int i;
 
 	p = malloc(sizeof(char) * 10);
-	p = _realloc(p, sizeof(char) * 10, sizeof(char) * 5);
-	i = 0;
-	while (i < 5)
+	p[0] = 'a';
+	p[1] = 'b';
+	p[2] = 'c';
+	p = _realloc(p, sizeof(char) * 10, 20);
+	if (p == NULL)
 	{
-		p[i] = 98;
-		i++;
+		printf("NULL\n");
+		return (1);
 	}
-	simple_print_buffer(p, 10);
+	simple_print_buffer(p, 20);
 	free(p);
 	return (0);
 }
