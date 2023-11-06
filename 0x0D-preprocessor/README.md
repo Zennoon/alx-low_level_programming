@@ -9,3 +9,6 @@ function to compute the area of a circle.
 
 2-main.c: Uses the predefined standard macro __FILE__ to print the name of
 the file it is compiled from.
+
+3-function_like_macro.h: Defines a function-like macro ABS(x), that takes one
+argument and returns the absolute value of it.
