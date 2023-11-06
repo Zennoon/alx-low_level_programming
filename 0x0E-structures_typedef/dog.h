@@ -16,4 +16,10 @@ struct dog
 
 void init_dog(struct dog *, char *, float, char *);
 void print_dog(struct dog *);
+
+/**
+ * typedef dog_t - A typedef for struct dog
+ */
+typedef struct dog dog_t;
+
 #endif
