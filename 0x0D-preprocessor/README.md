@@ -6,3 +6,6 @@ is expanded to the value 1024 upon use in the code.
 
 1-pi.h: Defines a PI macro with the value of pi which is used in the main
 function to compute the area of a circle.
+
+2-main.c: Uses the predefined standard macro __FILE__ to print the name of
+the file it is compiled from.
