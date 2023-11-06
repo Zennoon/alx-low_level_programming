@@ -11,4 +11,7 @@ function to compute the area of a circle.
 the file it is compiled from.
 
 3-function_like_macro.h: Defines a function-like macro ABS(x), that takes one
-argument and returns the absolute value of it.
+argument and expands to an expression equal to its absolute value.
+
+4-sum.h: Defines a function like macro SUM(x, y), which takes two arguments and
+expands to aan expression returning their sum.
