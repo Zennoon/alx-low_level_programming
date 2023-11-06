@@ -22,4 +22,7 @@ void print_dog(struct dog *);
  */
 typedef struct dog dog_t;
 
+dog_t *new_dog(char *, float, char *);
+
+
 #endif
