@@ -21,6 +21,13 @@ int _strlen(char *s)
 	return (len);
 }
 
+/**
+ * _memcpy - Copies the content of one memory area to another
+ * @src: The source from which we are copying
+ * @dest: The destination area to which we are copying
+ *
+ * Return: void
+ */
 void _memcpy(char *src, char *dest)
 {
 	int i;
