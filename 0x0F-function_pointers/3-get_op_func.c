@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "calc.h"
+#include "3-calc.h"
 
 /**
  * get_op_func - Accepts an operator from main and returns appropriate func
