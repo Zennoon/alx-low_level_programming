@@ -9,3 +9,7 @@ address is given by the pointer).
 
 1-array_iterator: The function, given an array and a function pointer 'action',
 calls back 'action' on every element of given array.
+
+2-int_index.c: The function is given an array, and a pointer to a function, and
+it returns the index of the first element in that array that the given function
+returns a non-zero value for. If no such elements are found, it returns -1.
