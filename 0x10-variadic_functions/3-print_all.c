@@ -8,7 +8,7 @@
  *
  * Return: void
  */
-void print_all(const char *const format, ...)
+void print_all(const char * const format, ...)
 {
 	const char *ptr;
 	char *str;
@@ -38,20 +38,14 @@ void print_all(const char *const format, ...)
 			is_found = 1;
 			str = va_arg(ap, char *);
 			if (str != NULL)
-			{
 				printf("%s", str);
-			}
 			else
-			{
 				printf("(nil)");
-			}
 			break;
 		}
 		ptr++;
 		if (*ptr && is_found)
-		{
 			printf(", ");
-		}
 	}
 	va_end(ap);
 	printf("\n");
