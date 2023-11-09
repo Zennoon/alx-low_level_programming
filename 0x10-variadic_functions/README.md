@@ -33,3 +33,6 @@ into another, meaning, initialize one argument pointer to point at the argument
 that another pointer is pointing to. It takes two arguments, the destination
 pointer, and the source pointer.
 
+0-sum_them_all: The function is variadic (it accepts a variable number of args,
+with variable types). Using the type and macros defined in stdarg.h, it goes
+through the optional arguments and sums them up and returns their values.
