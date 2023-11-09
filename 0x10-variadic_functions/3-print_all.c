@@ -3,111 +3,56 @@
 #include "variadic_functions.h"
 
 /**
- * print_integer - Prints an int arg that a given argument pointer points to
- * @ap: The argument pointer of another function which points to the int to
- * be printed
- *
- * Return: void
- */
-void print_integer(va_list ap)
-{
-	printf("%d", va_arg(ap, int));
-}
-
-/**
- * print_char - Prints a character arg that a given argument pointer points to
- * @ap: The argument pointer of another function which points to the char
- * to be printed
- *
- * Return: void
- */
-void print_char(va_list ap)
-{
-	printf("%c", va_arg(ap, int));
-}
-
-/**
- * print_float - Prints a float arg that a given argument pointer points to
- * @ap: The argument pointer of another function which points to the float to
- * be printed
- *
- * Return: void
- */
-void print_float(va_list ap)
-{
-	printf("%f", va_arg(ap, double));
-}
-
-/**
- * print_string - Prints a string arg that a given argument pointer points to
- * @ap: The argument pointer of another function which points to the string to
- * be printed
- *
- * Return: void
- */
-void print_string(va_list ap)
-{
-	char *s;
-
-	s = va_arg(ap, char *);
-	if (s != NULL)
-	{
-		printf("%s", s);
-	}
-	else
-	{
-		printf("(nil)");
-	}
-}
-
-/**
- * print_all - Prints the arguments passed based on a format string
- * @format: The format according to which the args are printed
+ * print_all - Prints the optional arguments based on a given format string
+ * @format: Format string that dictates the number and type of args to print
  *
  * Return: void
  */
 void print_all(const char *const format, ...)
 {
 	const char *ptr;
+	char *str;
+	int is_found;
 	va_list ap;
-	int i;
-	int j;
-	dts types[] = {
-		{'i', print_integer},
-		{'c', print_char},
-		{'f', print_float},
-		{'s', print_string}
-	};
 
 	ptr = format;
 	va_start(ap, format);
-	j = 0;
-       	while (*ptr)
-       	{
-       		i = 0;
-	       	while (i < 4)
-	       	{
-	       		if (types[i].symbol == *ptr)
-		       	{
-		       		void (*func)(va_list);
-			       	va_list aq;
-
-				if (j)
-			       	{
-			       		printf(", ");
-				}
-			       	j++;
-			       	func = types[i].f;
-			       	va_copy(aq, ap);
-			       	func(aq);
-			       	va_end(aq);
-			       	va_arg(ap, void *);
-			       	break;
+	while (format != NULL && *ptr)
+	{
+		is_found = 0;
+		switch (*ptr)
+		{
+		case 'c':
+			is_found = 1;
+			printf("%c", va_arg(ap, int));
+			break;
+		case 'i':
+			is_found = 1;
+			printf("%d", va_arg(ap, int));
+			break;
+		case 'f':
+			is_found = 1;
+			printf("%f", va_arg(ap, double));
+			break;
+		case 's':
+			is_found = 1;
+			str = va_arg(ap, char *);
+			if (str != NULL)
+			{
+				printf("%s", str);
 			}
-		       	i++;
+			else
+			{
+				printf("(nil)");
+			}
+			break;
 		}
-	       	ptr++;
+		ptr++;
+		if (*ptr && is_found)
+		{
+			printf(", ");
+		}
 	}
-       	va_end(ap);
-       	printf("\n");
+	va_end(ap);
+	printf("\n");
 }
