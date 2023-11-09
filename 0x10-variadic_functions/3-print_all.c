@@ -71,6 +71,7 @@ void print_all(const char *const format, ...)
 	const char *ptr;
 	va_list ap;
 	int i;
+	int j;
 	dts types[] = {
 		{'i', print_integer},
 		{'c', print_char},
@@ -80,25 +81,33 @@ void print_all(const char *const format, ...)
 
 	ptr = format;
 	va_start(ap, format);
-	if (format != NULL)
-	{
-		while (*ptr)
-		{
-			i = 0;
-			while (i < 4)
-			{
-				if (types[i].symbol == *ptr)
-				{
-					void (*func)(va_list);
+	j = 0;
+       	while (*ptr)
+       	{
+       		i = 0;
+	       	while (i < 4)
+	       	{
+	       		if (types[i].symbol == *ptr)
+		       	{
+		       		void (*func)(va_list);
+			       	va_list aq;
 
-					func = types[i].f;
-					func(ap);
-					break;
+				if (j)
+			       	{
+			       		printf(", ");
 				}
-				i++;
+			       	j++;
+			       	func = types[i].f;
+			       	va_copy(aq, ap);
+			       	func(aq);
+			       	va_end(aq);
+			       	va_arg(ap, void *);
+			       	break;
 			}
-			ptr++;
+		       	i++;
 		}
-		printf("\n");
+	       	ptr++;
 	}
+       	va_end(ap);
+       	printf("\n");
 }
