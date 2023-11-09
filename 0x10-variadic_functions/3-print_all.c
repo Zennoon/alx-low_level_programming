@@ -10,17 +10,17 @@
  */
 void print_all(const char * const format, ...)
 {
-	const char *ptr;
 	char *str;
 	int is_found;
+	int i;
 	va_list ap;
 
-	ptr = format;
+	i = 0;
 	va_start(ap, format);
-	while (format != NULL && *ptr)
+	while (format != NULL && format[i])
 	{
 		is_found = 0;
-		switch (*ptr)
+		switch (format[i])
 		{
 		case 'c':
 			is_found = 1;
@@ -43,8 +43,8 @@ void print_all(const char * const format, ...)
 				printf("(nil)");
 			break;
 		}
-		ptr++;
-		if (*ptr && is_found)
+		i++;
+		if (format[i] && is_found)
 			printf(", ");
 	}
 	va_end(ap);
