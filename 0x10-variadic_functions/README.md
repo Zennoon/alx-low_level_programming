@@ -36,3 +36,7 @@ pointer, and the source pointer.
 0-sum_them_all: The function is variadic (it accepts a variable number of args,
 with variable types). Using the type and macros defined in stdarg.h, it goes
 through the optional arguments and sums them up and returns their values.
+
+1-print_numbers.c: The function is variadic. Granted, the type of the optional
+arguments is going to be a number (promoted to an int). The function prints each
+argument with a separator string between them.
