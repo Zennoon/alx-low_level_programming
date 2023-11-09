@@ -8,10 +8,10 @@
  *
  * Return: void
  */
-void print_numbers(const char *separator, int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list ap;
-	int i;
+	unsigned int i;
 
 	va_start(ap, n);
 	for (i = 0; i < n; i++)
