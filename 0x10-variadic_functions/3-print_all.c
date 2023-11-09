@@ -1,53 +1,52 @@
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 #include "variadic_functions.h"
 
 /**
- * print_all - prints anything.
- * @format: Format string which dictates the number and type of args printed
+ * print_all - Prints the optional arguments based on a given format string
+ * @format: Format string that dictates the number and type of args to print
  *
  * Return: void
  */
 void print_all(const char * const format, ...)
 {
-	va_list ap;
-	unsigned int i = 0, j, c = 0;
 	char *str;
-	const char t_arg[] = "cifs";
+	int is_found;
+	int i;
+	va_list ap;
 
+	i = 0;
 	va_start(ap, format);
-	while (format && format[i])
+	while (format != NULL && format[i])
 	{
-		j = 0;
-		while (t_arg[j])
-		{
-			if (format[i] == t_arg[j] && c)
-			{
-				printf(", ");
-				break;
-			} j++;
-		}
+		is_found = 0;
 		switch (format[i])
 		{
 		case 'c':
-			printf("%c", va_arg(ap, int)), c = 1;
+			is_found = 1;
+			printf("%c", va_arg(ap, int));
 			break;
 		case 'i':
-			printf("%d", va_arg(ap, int)), c = 1;
+			is_found = 1;
+			printf("%d", va_arg(ap, int));
 			break;
 		case 'f':
-			printf("%f", va_arg(ap, double)), c = 1;
+			is_found = 1;
+			printf("%f", va_arg(ap, double));
 			break;
 		case 's':
-			str = va_arg(ap, char *), c = 1;
-			if (!str)
-			{
+			is_found = 1;
+			str = va_arg(ap, char *);
+			if (str != NULL)
+				printf("%s", str);
+			else
 				printf("(nil)");
-				break;
-			}
-			printf("%s", str);
 			break;
-		} i++;
+		}
+		i++;
+		if (format[i] && is_found)
+			printf(", ");
 	}
-	printf("\n"), va_end(ap);
+	va_end(ap);
+	printf("\n");
 }
