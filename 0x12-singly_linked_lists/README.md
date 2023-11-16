@@ -69,3 +69,8 @@ are using my main.c file, be sure to compile with 0-print_list.c
 up all the memory allocated for the list, both for nodes, and their strings.
 If you are using my main.c file, be sure to compile with 0-print_list.c and
 3-add_node_end.c.
+
+100-first.c: I can't really see how this task relates to singly linked lists or
+even data structures, but anyways, the function is declared with the attribute
+'constructor' to make it executed before the main function. We can also use the
+'destructor' attribute to make a function execute after the main function.
