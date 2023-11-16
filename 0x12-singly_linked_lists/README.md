@@ -49,3 +49,7 @@ the function prints the contents of each node in the list and returns the
 number of nodes of the list. It prints the contents in a specified format
 "[len] str", where len and str are the contents (besides the next pointer) of
 each node.
+
+1-list_len.c: Given the head of a singly linked list, the function returns the
+length (number of nodes) of the list. It basically does the same as the above
+function minus the printing part.
