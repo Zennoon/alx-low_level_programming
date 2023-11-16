@@ -1,9 +1,6 @@
 #ifndef LISTS_H
 #define LISTS_H
 
-/** Prototypes **/
-int _putchar(char);
-
 /** Structures **/
 /**
  * struct list_s - A singly linked list
@@ -17,6 +14,10 @@ typedef struct list_s
 {
 	char *str;
 	unsigned int len;
-	struct list_n *next;
+	struct list_s *next;
 } list_t;
+
+/** Prototypes **/
+int _putchar(char);
+size_t print_list(const list_t *);
 #endif

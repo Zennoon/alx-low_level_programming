@@ -41,3 +41,11 @@ a pointer/s. Nodes in singly linked lists contain one pointer, holding the
 address of the next node, while those in doubly linked lists have two pointers,
 one pointing to the previous node, and the other pointing to the next node in
 the list.
+
+<h2>Files</h2>
+
+0-print_list.c: Given a pointer to a singly linked list (or simply its head),
+the function prints the contents of each node in the list and returns the
+number of nodes of the list. It prints the contents in a specified format
+"[len] str", where len and str are the contents (besides the next pointer) of
+each node.
