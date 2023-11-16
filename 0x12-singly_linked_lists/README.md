@@ -55,6 +55,10 @@ length (number of nodes) of the list. It basically does the same as the above
 function minus the printing part.
 
 2-add_node.c: The function receives a pointer to the head of a singly linked
-list, and a string, and adds a new node to the linked list using the string.
+list, and a string, and adds a new node to the beginning of thelinked list.
 Beware though, the nodes and their strs have not been freed, so a memory
 leak is imminent.
+
+3-add_node_end.c: The function receives a pointer to the head of a singly linked
+list, and a string, and adds a new node at the end of the linked list. Again,
+the allocated memory for the nodes and their strs have not been freed.
