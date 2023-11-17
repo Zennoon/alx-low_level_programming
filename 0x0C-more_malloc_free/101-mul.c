@@ -185,6 +185,25 @@ char *mul(char *n1, char *n2)
 }
 
 /**
+ * is_zero - Checks if a string is all zeros or not
+ * @str: The string to check
+ *
+ * Return: 1 if str is all zeros, 0 otherwise
+ */
+int is_zero(char *str)
+{
+	while (*str)
+	{
+		if (*str != '0')
+		{
+			return (0);
+		}
+		str++;
+	}
+	return (1);
+}
+
+/**
  * is_num_string - Checks if a given string contains only digits
  * @s: The string to be checked
  *
@@ -232,7 +251,7 @@ int main(int ac, char **av)
 		_putchar('\n');
 		exit(98);
 	}
-	if (!strcmp(av[1], "0") || !strcmp(av[2], "0"))
+	if (is_zero(av[1]) || is_zero(av[2]))
 	{
 		_putchar('0');
 	}
