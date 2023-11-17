@@ -232,14 +232,21 @@ int main(int ac, char **av)
 		_putchar('\n');
 		exit(98);
 	}
-	product = mul(av[1], av[2]);
-	ptr = product;
-	while (*ptr)
+	if (!strcmp(av[1], "0") || !strcmp(av[2], "0"))
 	{
-		_putchar(*ptr);
-		ptr++;
+		_putchar('0');
+	}
+	else
+	{
+		product = mul(av[1], av[2]);
+		ptr = product;
+		while (*ptr)
+		{
+			_putchar(*ptr);
+			ptr++;
+		}
+		free(product);
 	}
 	_putchar('\n');
-	free(product);
 	return (0);
 }
