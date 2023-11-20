@@ -29,3 +29,6 @@ end of the list.
 
 4-free_listint.c: The function receives the head of a singly linked list and
 frees all the memory allocated for the nodes of the linked list.
+
+5-free_listint2.c: The function does the same as above but also sets the head
+of the linked list (the head whose address is passed to the function) to NULL.
