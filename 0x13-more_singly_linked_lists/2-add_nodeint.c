@@ -6,7 +6,7 @@
  * @head: A pointer to the head of the singly linked list
  * @n: The int to set as value for the newly created node
  *
- * Description: head is a pointer to the head and not just a head itself because
+ * Description: head is a pointer to the head and not a head itself because
  * we need to alter the head to point to the new node. If a head was given
  * directly only a copy of it would reach the function, and we would only be
  * able to alter the copy, and not the actual one used in the main function to
