@@ -26,3 +26,6 @@ the linked list, initializing its n with the given integer value.
 pointer to a head of a linked list, and an integer value. It creates the node
 and inits its n value with the given argument, it then adds the node to the
 end of the list.
+
+4-free_listint.c: The function receives the head of a singly linked list and
+frees all the memory allocated for the nodes of the linked list.
