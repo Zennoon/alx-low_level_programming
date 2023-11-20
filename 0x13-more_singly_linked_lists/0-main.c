@@ -17,7 +17,6 @@ int main(void)
 	size_t n;
 
 	head = &hello;
-	printf("%lu\n", sizeof(listint_t));
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 	{
@@ -27,7 +26,7 @@ int main(void)
 	new->n = 1024;
 	new->next = head;
 	head = new;
-	n = print_list(head);
+	n = print_listint(head);
 	printf("%lu elements\n", n);
 	free(new);
 	return (0);

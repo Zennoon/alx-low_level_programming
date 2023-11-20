@@ -2,12 +2,12 @@
 #include "lists.h"
 
 /**
- * print_list: Prints the content of the nodes of a given singly linked list
+ * print_listint -  Prints the content of nodes of a given singly linked list
  * @h: Head / A pointer to the first node of the singly linked list
  *
  * Return: The number of nodes in the singly linked list
  */
-int print_list(const listint_t *h)
+int print_listint(const listint_t *h)
 {
 	unsigned int node_cnt = 0;
 
