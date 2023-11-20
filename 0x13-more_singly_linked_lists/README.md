@@ -17,3 +17,7 @@ the number of (non NULL) nodes in the list.
 1-listint_len.c: Given a head of a singly linked list, the function returns
 the number of nodes/elements in the linked list using the fact that the last
 node has its next pointer pointing to NULL.
+
+2-add_nodeint.c: The function accepts a pointer to the head of a linked list,
+and an integer value, and it creates and adds a new node to the beginning of
+the linked list, initializing its n with the given integer value.
