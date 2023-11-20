@@ -24,6 +24,15 @@ int main(void)
 	n = pop_listint(&head);
 	printf("n = %d\n", n);
 	print_listint(head);
+	n = pop_listint(&head);
+	printf("n = %d\n", n);
+	print_listint(head);
+	n = pop_listint(&head);
+	printf("n = %d\n", n);
+	print_listint(head);
+	n = pop_listint(&head);
+	printf("n = %d\n", n);
+	print_listint(head);
 	free_listint2(&head);
 	return (0);
 }
