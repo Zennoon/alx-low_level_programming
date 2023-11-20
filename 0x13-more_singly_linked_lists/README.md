@@ -32,3 +32,7 @@ frees all the memory allocated for the nodes of the linked list.
 
 5-free_listint2.c: The function does the same as above but also sets the head
 of the linked list (the head whose address is passed to the function) to NULL.
+
+6-pop_listint.c: The function receives a pointer to the head of a singly linked
+list, and it pops the first node and returns the value (n) that was stored in
+that node.
