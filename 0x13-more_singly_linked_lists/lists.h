@@ -18,4 +18,5 @@ typedef struct listint_s
 
 /** function prototypes **/
 int print_listint(const listint_t *);
+size_t listint_len(const listint_t *);
 #endif

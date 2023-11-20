@@ -13,3 +13,7 @@ the list.
 0-print_listint.c: The function receives a pointer to a singly linked list,
 and prints the value (integer) stored in each node of the list. It returns
 the number of (non NULL) nodes in the list.
+
+1-listint_len.c: Given a head of a singly linked list, the function returns
+the number of nodes/elements in the linked list using the fact that the last
+node has its next pointer pointing to NULL.
