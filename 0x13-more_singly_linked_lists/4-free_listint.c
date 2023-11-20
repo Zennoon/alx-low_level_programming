@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_listint - Frees the heap memory space allocated for a given singly llist
+ * free_listint - Frees heap memory space allocated for a given singly llist
  * @head: The head of a linked list (A pointer to the first node)
  *
  * Return: void
