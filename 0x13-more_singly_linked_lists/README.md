@@ -21,3 +21,8 @@ node has its next pointer pointing to NULL.
 2-add_nodeint.c: The function accepts a pointer to the head of a linked list,
 and an integer value, and it creates and adds a new node to the beginning of
 the linked list, initializing its n with the given integer value.
+
+3-add_nodeint_end.c: Similar to the previous one, this functino receives a
+pointer to a head of a linked list, and an integer value. It creates the node
+and inits its n value with the given argument, it then adds the node to the
+end of the list.
