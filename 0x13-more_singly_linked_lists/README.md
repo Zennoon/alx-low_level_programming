@@ -52,3 +52,10 @@ given n value and inserts it in the list at the given index. A pointer to the
 head was given because if the given index is zero, the function inserts the
 new node at the beginning, and so the head that the caller function is using
 must be altered to point to the new node.
+
+10-delete_nodeint.c: Given a pointer to the head of a singly linked list, and
+an index, the function deletes (de-attachs and frees) the node at that index
+of the linked list if it exists. Again, a pointer to the head is given because,
+if the function receives an index of 0, it removes the node that is pointed to
+by the head, and so the head that is used by the caller function has to be
+altered to point to the new first node (previously second).
