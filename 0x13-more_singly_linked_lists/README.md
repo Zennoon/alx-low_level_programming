@@ -41,3 +41,7 @@ that node.
 an unsigned int index, and it returns the node at the given index if it exists.
 The index is the offset of the node from the head (0 would mean an offset of 0
 from the head, which is the head itself).
+
+8-sum_listint.c: The function is given a pointer to the first node of a singly
+linked list (its head), and it returns the sum of the n values that are stored
+in the nodes of the list.
