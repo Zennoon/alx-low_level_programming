@@ -45,3 +45,10 @@ from the head, which is the head itself).
 8-sum_listint.c: The function is given a pointer to the first node of a singly
 linked list (its head), and it returns the sum of the n values that are stored
 in the nodes of the list.
+
+9-insert_nodeint.c: Given a pointer to the head of a singly linked list, an
+index unsigned int, and an n value, the function creates a new node with the
+given n value and inserts it in the list at the given index. A pointer to the
+head was given because if the given index is zero, the function inserts the
+new node at the beginning, and so the head that the caller function is using
+must be altered to point to the new node.
