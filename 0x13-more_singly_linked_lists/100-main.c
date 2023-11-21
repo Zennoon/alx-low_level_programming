@@ -4,21 +4,24 @@
 /**
  * main - The entry point of the program
  *
- * Description: Uses the insert_nodeint_at_index function to insert a node to
+ * Description: Uses reverse_listint function to reverse a singly linked list
  * a singly linked list at a desired index
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int ret;
 	listint_t *head;
 
 	head = NULL;
 	add_nodeint_end(&head, 0);
+	add_nodeint_end(&head, 1);
 	add_nodeint_end(&head, 2);
+	add_nodeint_end(&head, 3);
+	add_nodeint_end(&head, 4);
+	add_nodeint_end(&head, 5);
+	add_nodeint_end(&head, 6);
 	print_listint(head);
-	ret = delete_nodeint_at_index(&head, 0);
-	printf("ret = %d\n", ret);
+	reverse_listint(&head);
 	print_listint(head);
 	free_listint2(&head);
 	return (0);

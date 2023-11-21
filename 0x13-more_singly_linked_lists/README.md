@@ -59,3 +59,7 @@ of the linked list if it exists. Again, a pointer to the head is given because,
 if the function receives an index of 0, it removes the node that is pointed to
 by the head, and so the head that is used by the caller function has to be
 altered to point to the new first node (previously second).
+
+100-reverse_listint.c: The function accepts a pointer to the head of a singly
+linked list and reverses the list. The function uses only two variables and
+one loop.
