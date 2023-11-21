@@ -36,3 +36,8 @@ of the linked list (the head whose address is passed to the function) to NULL.
 6-pop_listint.c: The function receives a pointer to the head of a singly linked
 list, and it pops the first node and returns the value (n) that was stored in
 that node.
+
+7-get_nodeint.c: The function receives the head of a singly linked list, and
+an unsigned int index, and it returns the node at the given index if it exists.
+The index is the offset of the node from the head (0 would mean an offset of 0
+from the head, which is the head itself).
