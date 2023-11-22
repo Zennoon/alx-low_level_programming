@@ -32,7 +32,7 @@ int main(void)
 	add_nodeint(&head, 402);
 	add_nodeint(&head, 1024);
 	print_listint_safe(head);
-	printf("size = %lu\n %lu\n", free_listint_safe(&head), sizeof(listint_t));
+	printf("size = %lu\n %lu\n", free_listint_safe(&head));
 	printf("size = %lu\n", free_listint_safe(&head2));
 	printf("%p, %p\n", (void *) head2, (void *) head);
 	return (0);
