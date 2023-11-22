@@ -32,7 +32,7 @@ int is_in_arr2(listint_t **arr, size_t n, listint_t *add)
  */
 size_t free_listint_safe(listint_t **head)
 {
-	size_t size = 0, node_cnt = 0;
+	size_t node_cnt = 0;
 	listint_t **address_arr = malloc(0);
 	listint_t *tmp;
 
@@ -45,7 +45,6 @@ size_t free_listint_safe(listint_t **head)
 			exit(98);
 		}
 		address_arr[node_cnt] = *head;
-		size += sizeof(listint_t);
 		tmp = (*head)->next;
 		free(*head);
 		*head = tmp;
@@ -53,5 +52,5 @@ size_t free_listint_safe(listint_t **head)
 	}
 	*head = NULL;
 	free(address_arr);
-	return (size);
+	return (node_cnt);
 }
