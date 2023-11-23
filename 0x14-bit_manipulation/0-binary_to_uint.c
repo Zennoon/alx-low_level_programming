@@ -1,5 +1,6 @@
+#include <stdio.h>
 #include "main.h"
-#define NULL ((void *) 0)
+
 /**
  * _strlen - Returns the length of a given string
  * @s: The string whose length is returned
@@ -41,12 +42,12 @@ unsigned int is_valid_binary(const char *s)
 }
 
 /**
- * binary_to_uint - Returns the decimal representation of a given binary number
+ * binary_to_uint2 - Returns decimal representation of a given binary number
  * @b: The binary number as a string
  *
- * Returns: The decimal form of b
+ * Return: The decimal form of b
  */
-unsigned int binary_to_uint(const char *b)
+unsigned int binary_to_uint2(const char *b)
 {
 	unsigned int dec = 0;
 
@@ -64,4 +65,51 @@ unsigned int binary_to_uint(const char *b)
 		b++;
 	}
 	return (dec >> 1);
+}
+
+/**
+ * calc_power - Returns base ** exp
+ * @base: The base of the exponentiaition operation
+ * @exp: The exponent
+ *
+ * Return: base ** exp
+ */
+unsigned int calc_power(unsigned int base, unsigned int exp)
+{
+	unsigned int result = 1;
+
+	while (exp > 0)
+	{
+		result *= base;
+		exp--;
+	}
+	return (result);
+}
+
+/**
+ * binary_to_uint - Returns the decimal representation of a given binary number
+ * @b: The binary number as a string
+ *
+ * Return: The decimal form of b
+ */
+unsigned int binary_to_uint(const char *b)
+{
+	unsigned int len, dec = 0;
+
+	if (b == NULL || !is_valid_binary(b))
+	{
+		return (dec);
+	}
+	len = _strlen(b);
+	printf("len = %u\n", len);
+	while (*b)
+	{
+		len--;
+		if (*b == '1')
+		{
+			dec += calc_power(2, len);
+		}
+		b++;
+	}
+	return (dec);
 }

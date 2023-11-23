@@ -11,9 +11,9 @@
 int main(void)
 {
 	unsigned int dec;
-	char *b = "0110";
+	char *b = "10001";
 
 	dec = binary_to_uint(b);
-	printf("dec = %d\n", dec);
+	printf("dec = %u\n", dec);
 	return (0);
 }
