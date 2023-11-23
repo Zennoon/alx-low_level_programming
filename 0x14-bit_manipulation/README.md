@@ -29,3 +29,8 @@ operand to the left by the amount specified by the right operand.
 6. Binary Right Shift (>>): Given two operands, it shifts the bits of the right
 operand to the right by the amount specified by the right operand.
 
+<h3>Tasks</h3>
+
+0-binary_to_uint.c: The function receives a string of characters, and if the
+string holds a valid binary number (only 0s and 1s), it returns the decimal
+representation of the binary number.
