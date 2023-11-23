@@ -101,7 +101,6 @@ unsigned int binary_to_uint(const char *b)
 		return (dec);
 	}
 	len = _strlen(b);
-	printf("len = %u\n", len);
 	while (*b)
 	{
 		len--;
