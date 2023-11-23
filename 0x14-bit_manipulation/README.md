@@ -47,3 +47,7 @@ representation.
 3-set_bit.c: Given an unsigned long int, and an index, the function sets the
 value of the bit at that index in the binary form of the given number to 1
 if it isn't already.
+
+4-clear_bit.c: Given an unsigned long int, and an index, the function sets the
+value of the bit at that index in the binary form of the given number to 0
+if it isn't already.
