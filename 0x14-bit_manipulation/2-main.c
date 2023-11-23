@@ -10,6 +10,6 @@
  */
 int main(void)
 {
-	printf("%d\n", get_bit(98, 1));
+	printf("%d\n", get_bit(0, 1));
 	return (0);
 }
