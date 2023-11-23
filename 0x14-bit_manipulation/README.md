@@ -51,3 +51,7 @@ if it isn't already.
 4-clear_bit.c: Given an unsigned long int, and an index, the function sets the
 value of the bit at that index in the binary form of the given number to 0
 if it isn't already.
+
+5-flip_bits.c: Given two unsigned long integers, the function computes and
+returns the number of bit flips that would have to be done to convert one of
+them to the other.
