@@ -11,7 +11,8 @@
 int main(void)
 {
 	unsigned long int n = 98;
+
 	set_bit(&n, 0);
 	printf("%lu\n", n);
-        return (0);
+	return (0);
 }

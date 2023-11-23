@@ -10,7 +10,7 @@
  */
 unsigned long calc_power(unsigned long base, unsigned int exp)
 {
-	unsigned result = 1;
+	unsigned int result = 1;
 
 	while (exp > 0)
 	{
@@ -54,7 +54,7 @@ int get_bit(unsigned long int n, unsigned int index)
 
 
 /**
- * set_bit - Sets value of the bit at a given index of a num to 1 if not already
+ * set_bit - Sets value of bit at a given index of a num to 1 if not already
  * @n: A pointer to the number whose bits are manipulated
  * @index: The index at which the bit is set to 1
  *
