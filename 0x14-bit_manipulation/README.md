@@ -43,3 +43,7 @@ shifting a number 1 bit is the same as integer division by 2.
 2-get_bit.c: Given an unsigned long int, and an index, the function returns the
 value of the bit in that index when the number is converted into its binary
 representation.
+
+3-set_bit.c: Given an unsigned long int, and an index, the function sets the
+value of the bit at that index in the binary form of the given number to 1
+if it isn't already.
