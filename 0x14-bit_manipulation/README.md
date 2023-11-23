@@ -34,3 +34,8 @@ operand to the right by the amount specified by the right operand.
 0-binary_to_uint.c: The function receives a string of characters, and if the
 string holds a valid binary number (only 0s and 1s), it returns the decimal
 representation of the binary number.
+
+1-print_binary.c: Given an unsigned long int, the function prints the binary
+representation of the number without using /, %, and without arrays, and
+malloc. The operators can be implemented using right shift. Remember, right
+shifting a number 1 bit is the same as integer division by 2.

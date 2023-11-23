@@ -11,7 +11,7 @@
 int main(void)
 {
 	unsigned int dec;
-	char *b = "10001";
+	char *b = NULL;
 
 	dec = binary_to_uint(b);
 	printf("dec = %u\n", dec);
