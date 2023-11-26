@@ -32,10 +32,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int i = 0;
 	int val = 0;
 
-	if (index > 63)
-	{
-		return (-1);
-	}
 	while (n > 0)
 	{
 		if (i == index)
@@ -66,6 +62,11 @@ int get_bit(unsigned long int n, unsigned int index)
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
+
+	if (index > 63)
+	{
+		return (-1);
+	}
 	if (get_bit(*n, index) == 0)
 	{
 		*n += calc_power(2, index);
