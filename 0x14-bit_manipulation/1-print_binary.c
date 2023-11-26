@@ -35,7 +35,7 @@ unsigned long get_power_of_2(unsigned long n)
 void print_binary(unsigned long int n)
 {
 	unsigned long int lim = get_power_of_2(n);
-	long int diff;
+	long int diff, count = 0;
 
 	while (lim > 0)
 	{
