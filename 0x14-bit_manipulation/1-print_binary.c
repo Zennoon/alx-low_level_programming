@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <limits.h>
 #include "main.h"
 
 /**
@@ -11,11 +11,19 @@ unsigned long get_power_of_2(unsigned long n)
 {
 	unsigned long lim = 1;
 
-	while (lim <= n)
+	if (n > (ULONG_MAX / 2))
 	{
-		lim *= 2;
+		return ((ULONG_MAX / 2) + 1);
 	}
-	return (lim >> 1);
+	if (n > 0)
+	{
+		while (lim <= n)
+		{
+			lim *= 2;
+		}
+		lim >>= 1;
+	}
+	return (lim);
 }
 
 /**

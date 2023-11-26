@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <limits.h>
 /**
  * main - The entry point of the program
  *
@@ -9,6 +9,6 @@
  */
 int main(void)
 {
-	print_binary(1234567898764);
+	print_binary(ULONG_MAX);
 	return (0);
 }
