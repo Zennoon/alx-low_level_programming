@@ -11,9 +11,9 @@ unsigned long get_power_of_2(unsigned long n)
 {
 	unsigned long lim = 1;
 
-	if (n > (ULONG_MAX / 2))
+	if (n > (ULONG_MAX >> 1))
 	{
-		return ((ULONG_MAX / 2) + 1);
+		return ((ULONG_MAX >> 1) + 1);
 	}
 	if (n > 0)
 	{
