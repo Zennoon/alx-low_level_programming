@@ -28,5 +28,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		}
 		free(str);
 	}
-	return (printed_chars == (ssize_t) letters ? printed_chars : 0);
+	return (printed_chars);
 }
