@@ -54,3 +54,8 @@ is achieved using the O_CREAT and O_TRUNC flags with the open function. The mode
 is set using the mode parameter of the function. 0600 represents read and write
 access for the user which is what we desire. Lastly, the string is written into
 the file usingf the write function.
+
+3. 2-append_text_to_file.c: The function receives a file name, and a null
+terminated string, and it appends the string to the file if it exists. This is
+done using the open function with the O_APPEND flag. If the file does not exist,
+or the write operation fails, the function returns -1, otherwise 1 is returned.
