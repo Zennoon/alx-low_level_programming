@@ -46,3 +46,11 @@ perform the task. If successful, it returns the number of characters printed. If
 any of open, read, or write functions encounter an error, if the given file name
 is NULL, or if the number of actual written chars is different from the expected
 number, it returns 0.
+
+2. 1-create_file.c: The function creates a new file (if it doesn't exist already
+, it truncates the file if it exists) with the mode rw------- and names it with
+a given name. It then inserts a given string to it. The creation / truncation
+is achieved using the O_CREAT and O_TRUNC flags with the open function. The mode
+is set using the mode parameter of the function. 0600 represents read and write
+access for the user which is what we desire. Lastly, the string is written into
+the file usingf the write function.
