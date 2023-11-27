@@ -59,3 +59,9 @@ the file usingf the write function.
 terminated string, and it appends the string to the file if it exists. This is
 done using the open function with the O_APPEND flag. If the file does not exist,
 or the write operation fails, the function returns -1, otherwise 1 is returned.
+
+4. 3-cp.c: The program expects two command line arguments that represent file
+names. It then copies the content of first file (if it exists and can be
+accessed) to the second file (if it can be created or written into). If an
+error is encountered, an appropriate error message is printed to stderr, and
+the program exits.
