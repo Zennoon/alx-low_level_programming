@@ -56,4 +56,4 @@ list. Uses the dlistint_len(), add_nodeint() and add_nodeint_end() functions for
 edge cases, and the rest is just pointer manipulation.
 
 102-largest_palindrome.py: Returns the largest palindrome that is a product of
-two 3 digit numbers. The answer is 58 which is the product of 995 and 583.
+two 3 digit numbers. The answer is 906609 which is the product of 993 and 913.
