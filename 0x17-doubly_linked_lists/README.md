@@ -27,3 +27,7 @@ the pointer becomes NULL.
 1-dlistint_len.c: Returns the number of nodes of a doubly linked list. Again,
 this can be done exactly the same way as singly linked lists, using the above
 concept, but without printing anything.
+
+2-add_dnodeint.c: Adds a new node at the beginning of a doubly linked list. The
+pointer manipulation is the intersting part here. If the list is empty (head is
+NULL), then we don't/can't modify the prev pointer of the head.
