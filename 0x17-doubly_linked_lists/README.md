@@ -31,3 +31,7 @@ concept, but without printing anything.
 2-add_dnodeint.c: Adds a new node at the beginning of a doubly linked list. The
 pointer manipulation is the intersting part here. If the list is empty (head is
 NULL), then we don't/can't modify the prev pointer of the head.
+
+3-add_dnodeint.c: Adds a new node at the end of a doubly linked list. Again,
+the tricky part is handling the pointers. If the list is empty, the head pointer
+has to be changed as well, because the new node will be the head.
