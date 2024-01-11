@@ -35,3 +35,8 @@ NULL), then we don't/can't modify the prev pointer of the head.
 3-add_dnodeint.c: Adds a new node at the end of a doubly linked list. Again,
 the tricky part is handling the pointers. If the list is empty, the head pointer
 has to be changed as well, because the new node will be the head.
+
+4-free_dlistint.c: Frees up the memory allocated for the nodes of a doubly
+linked list. There is a temporary pointer in order to iterate the list. We
+can't access the next pointer of a freed node. So, we need a tmp to hold the
+next node, free the current node, and then go to the next node.
