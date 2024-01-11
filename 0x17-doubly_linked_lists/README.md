@@ -40,3 +40,9 @@ has to be changed as well, because the new node will be the head.
 linked list. There is a temporary pointer in order to iterate the list. We
 can't access the next pointer of a freed node. So, we need a tmp to hold the
 next node, free the current node, and then go to the next node.
+
+5-get_dnodeint.c: Returns a node at a given index of a doubly linked list. It
+iterates through the list while incrementing an int var. If at a point, the var
+equals the index, it returns the node at that point of the iteration. If the
+node pointer becomes NULL before var equals index, it means that index is out of
+range and the function returns NULL.
