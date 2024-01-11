@@ -24,3 +24,6 @@ one is exactly similar to the implementation on a singly linked list. Just
 iterate through the list with a pointer, printing the values as you go, until
 the pointer becomes NULL.
 
+1-dlistint_len.c: Returns the number of nodes of a doubly linked list. Again,
+this can be done exactly the same way as singly linked lists, using the above
+concept, but without printing anything.
