@@ -50,3 +50,8 @@ range and the function returns NULL.
 6-sum_dlistint.c: Returns the sum of the values held inside the nodes of a
 doubly linked list. Uses the familiar technique of iterating, while adding the
 values.
+
+7-insert_dnodeint_at_index.c: Inserts a node at a given index in a doubly linked
+list. Uses the dlistint_len(), add_nodeint() and add_nodeint_end() functions for
+edge cases, and the rest is just pointer manipulation.
+
