@@ -12,10 +12,12 @@ def is_palindrome(num):
 
 
 def largest_palindrome():
+    palindromes = []
     for i in range(999, 99, -1):
         for j in range(999, 99, -1):
             if is_palindrome(i * j):
-                return (i * j)
+                palindromes.append(i * j)
+    return (max(palindromes))
 
 
 print(largest_palindrome())
