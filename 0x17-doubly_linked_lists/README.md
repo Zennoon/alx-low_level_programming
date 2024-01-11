@@ -46,3 +46,7 @@ iterates through the list while incrementing an int var. If at a point, the var
 equals the index, it returns the node at that point of the iteration. If the
 node pointer becomes NULL before var equals index, it means that index is out of
 range and the function returns NULL.
+
+6-sum_dlistint.c: Returns the sum of the values held inside the nodes of a
+doubly linked list. Uses the familiar technique of iterating, while adding the
+values.
