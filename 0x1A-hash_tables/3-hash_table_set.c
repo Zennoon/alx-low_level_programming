@@ -17,7 +17,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (new_elem == NULL)
 		return (0);
-	if (!(*key) || ht == NULL || ht->array == NULL || ht->size <= 0)
+	if (key == NULL || value == NULL ||
+	    !(*key) || ht == NULL || ht->array == NULL || ht->size <= 0)
 	{
 		free(new_elem);
 		return (0);
