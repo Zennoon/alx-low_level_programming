@@ -36,9 +36,9 @@ int get_elem_count(const hash_table_t *ht)
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	printf("{");
 	if (ht != NULL)
 	{
+		printf("{")
 		unsigned long int i;
 		int elem_count = get_elem_count(ht);
 
@@ -55,6 +55,6 @@ void hash_table_print(const hash_table_t *ht)
 				node = node->next;
 			}
 		}
+		printf("}\n")
 	}
-	printf("}\n");
 }
