@@ -38,10 +38,10 @@ void hash_table_print(const hash_table_t *ht)
 {
 	if (ht != NULL)
 	{
-		printf("{");
 		unsigned long int i;
 		int elem_count = get_elem_count(ht);
 
+		printf("{");
 		for (i = 0; i < ht->size; i++)
 		{
 			hash_node_t *node = ht->array[i];
