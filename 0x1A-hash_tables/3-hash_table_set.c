@@ -38,9 +38,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	{
 		hash_node_t *existing_node = get_hash_node(ht, key);
-		char *elem_val = strdup(value);
+		char *elem_key = strdup(key), *elem_val = strdup(value);
 
-		if (elem_val == NULL)
+		if (elem_key == NULL || elem_val == NULL)
 			return (0);
 		if (existing_node != NULL)
 		{
@@ -56,10 +56,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 			if (new_node == NULL)
 			{
+				free(elem_key);
 				free(elem_val);
 				return (0);
 			}
-			new_node->key = (char *)key;
+			new_node->key = elem_key;
 			new_node->value = elem_val;
 			new_node->next = *elem_position;
 			*elem_position = new_node;
