@@ -44,6 +44,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (0);
 		if (existing_node != NULL)
 		{
+			free(elem_key);
 			free(existing_node->value);
 			existing_node->value = elem_val;
 		}
