@@ -1,6 +1,29 @@
 #include "hash_tables.h"
 
 /**
+ * get_hash_node - Retrieves an element of a hash table given the key
+ * @ht: Pointer to the hash table
+ * @key: The key of the key:value pair to find
+ *
+ * Return: Address of the element in the hash table if it exists, NULL if not
+ */
+hash_node_t *get_hash_node(hash_table_t *ht, const char *key)
+{
+	hash_node_t *node = NULL, *ptr;
+
+	ptr = ht->array[key_index((unsigned char *)key, ht->size)];
+	while (ptr != NULL)
+	{
+		if (!strcmp(key, ptr->key))
+		{
+			node = ptr;
+			break;
+		}
+		ptr = ptr->next;
+	}
+	return (node);
+}
+/**
  * hash_table_set - Adds a new element (key-value pair) to a given hash table
  * @ht: Pointer to the hash table to insert to
  * @key: The key of the element to add
@@ -10,36 +33,37 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new_elem = malloc(sizeof(hash_node_t));
-	char *elem_val;
-	hash_node_t **elem_position;
-	unsigned long int elem_index;
+	if (ht == NULL || key == NULL || value == NULL || !(*key))
+		return (0);
 
-	if (new_elem == NULL)
-		return (0);
-	if (key == NULL || value == NULL ||
-	    !(*key) || ht == NULL || ht->array == NULL || ht->size <= 0)
 	{
-		free(new_elem);
-		return (0);
+		hash_node_t *existing_node = get_hash_node(ht, key);
+		char *elem_val = strdup(value);
+
+		if (elem_val == NULL)
+			return (0);
+		if (existing_node != NULL)
+		{
+			free(existing_node->value);
+			existing_node->value = elem_val;
+		}
+		else
+		{
+			hash_node_t *new_node = malloc(sizeof(hash_node_t));
+			hash_node_t **elem_position =
+				&(ht->array[key_index((unsigned char *)key,
+						      ht->size)]);
+
+			if (new_node == NULL)
+			{
+				free(elem_val);
+				return (0);
+			}
+			new_node->key = (char *)key;
+			new_node->value = elem_val;
+			new_node->next = *elem_position;
+			*elem_position = new_node;
+		}
 	}
-	new_elem->key = (char *)key;
-	elem_val = strdup(value);
-	if (elem_val == NULL)
-	{
-		free(new_elem);
-		return (0);
-	}
-	new_elem->value = elem_val;
-	elem_index = key_index((unsigned char *)key, ht->size);
-	if (elem_index >= ht->size)
-	{
-		free(new_elem);
-		free(elem_val);
-		return (0);
-	}
-	elem_position = &((ht->array)[elem_index]);
-	new_elem->next = *elem_position;
-	*elem_position = new_elem;
 	return (1);
 }
