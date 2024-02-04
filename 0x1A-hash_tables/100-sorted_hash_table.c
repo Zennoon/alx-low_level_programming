@@ -155,17 +155,22 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 	char *val = NULL;
-	shash_node_t *node = ht->array[key_index((unsigned char *)key,
-						 ht->size)];
 
-	while (ht != NULL && node != NULL)
+	if (key == NULL && !(*key))
+		return (val);
 	{
-		if (!strcmp(key, node->key))
+		shash_node_t *node = ht->array[key_index((unsigned char *)key,
+							 ht->size)];
+
+		while (ht != NULL && node != NULL && key != NULL && *key)
 		{
-			val = node->value;
-			break;
+			if (!strcmp(key, node->key))
+			{
+				val = node->value;
+				break;
+			}
+			node = node->next;
 		}
-		node = node->next;
 	}
 	return (val);
 }
