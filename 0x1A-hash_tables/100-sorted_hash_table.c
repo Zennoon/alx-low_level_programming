@@ -156,13 +156,13 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 	char *val = NULL;
 
-	if (key == NULL && !(*key))
+	if (ht == NULL || key == NULL || !(*key))
 		return (val);
 	{
 		shash_node_t *node = ht->array[key_index((unsigned char *)key,
 							 ht->size)];
 
-		while (ht != NULL && node != NULL && key != NULL && *key)
+		while (node != NULL)
 		{
 			if (!strcmp(key, node->key))
 			{
