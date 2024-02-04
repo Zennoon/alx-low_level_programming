@@ -1,8 +1,8 @@
 #include "hash_tables.h"
 
 /**
- * shash_table_create - Creates a new alphabetically ordered hash table of given
- * size and returns its address
+ * shash_table_create - Creates a new alphabetically ordered hash table of
+ * given size and returns its address
  * @size: Size of the hash table to create
  *
  * Return: Address of the newly created table, or NULL if it fails
