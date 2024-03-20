@@ -11,7 +11,7 @@ Functions:
 def island_perimeter(grid):
     """
     Given a grid (list of lists of 0s and 1s) representing an island (where 0
-    represents water and 1 represents land), returns the perimeter of the island
+    represents water, 1 represents land), returns the perimeter of the island
 
     Args:
         grid (list(list(int))): A list of lists of 0s and 1s.
