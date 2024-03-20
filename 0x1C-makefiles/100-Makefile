@@ -5,8 +5,9 @@ SRC=main.c school.c
 OBJ=$(SRC:%.c=%.o)
 NAME=school
 CFLAGS=-Wall -Werror -Wextra -pedantic
+RM
 
-all: $(OBJ)
+all: $(OBJ) m.h
 	@export CFLAGS="-Wall -Werror -Wextra -pedantic"
 	$(CC) $(OBJ) -o $(NAME)
 
