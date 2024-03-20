@@ -34,13 +34,3 @@ def island_perimeter(grid):
                 if i == grid_len - 1 or grid[i + 1][j] == 0:
                     perimeter += 1
     return (perimeter)
-
-
-grid = [
-    [0, 0, 0, 0, 0, 0],
-    [0, 1, 1, 0, 0, 0],
-    [0, 1, 0, 0, 0, 0],
-    [0, 1, 1, 1, 0, 0],
-    [0, 0, 0, 0, 0, 0]
-]
-print(island_perimeter(grid))
