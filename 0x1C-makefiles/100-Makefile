@@ -7,9 +7,11 @@ OBJ=$(SRC:%.c=%.o)
 NAME=school
 CFLAGS=-Wall -Werror -Wextra -pedantic
 
-all: $(OBJ) m.h
+all: $(OBJ)
+ifneq ("$(wildcard m.h)","")
 	@export CFLAGS
 	$(CC) $(OBJ) -o $(NAME)
+endif
 
 clean:
 	$(RM) *~ $(NAME)
